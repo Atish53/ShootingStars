@@ -1,0 +1,67 @@
+﻿@model ShootingStars.Models.English5
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>English5</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.English5title)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.English5title)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.English5Descr)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.English5Descr)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.English5Doc)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.English5Doc)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.English5Image)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.English5Image)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.English5Teacher)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.English5Teacher)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.English5TeacherImg)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.English5TeacherImg)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.English5Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -25,6 +25,9 @@ namespace ShootingStars.Models
         {
         }
 
+        public DbSet<English4> English4 { get; set; }
+        public DbSet<English5> English5s { get; set; }
+
         public static ApplicationDbContext Create()
         {
             return new ApplicationDbContext();
