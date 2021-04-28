@@ -13,7 +13,7 @@ namespace ShootingStars.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "202104201000271_InitialModel"; }
+            get { return "202104280006152_InitialModel"; }
         }
         
         string IMigrationMetadata.Source

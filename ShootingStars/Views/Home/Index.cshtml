@@ -1,31 +1,654 @@
 ﻿@{
     ViewBag.Title = "Home Page";
+    Layout = "~/Views/Shared/_TempLayout.cshtml";
 }
+<head>
 
-<div class="jumbotron">
-    <h1>Shooting Stars</h1>
-    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
-    <p><a href="https://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
-</div>
+</head>
 
-<div class="row">
-    <div class="col-md-4">
-        <h2>Getting started</h2>
-        <p>
-            ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-            enables a clean separation of concerns and gives you full control over markup
-            for enjoyable, agile development.
-        </p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
+
+<body>
+    <!-- Start slider area -->
+    <div id="mu-slider">
+        <div class="mu-slide">
+            <!-- Start single slide  -->
+            <div class="mu-single-slide">
+                <img src="~/Content/Website Images/laptop and coffee.jpg" alt="slider img" width="1550" height="670" >
+                <div class="mu-single-slide-content-area">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="mu-single-slide-content">
+                                    <h1>Welcome to Shooting Stars</h1>
+                                    <p>We look forward to spreading education to all those around South Africa who do not have access to proper educational materials for their schooling.</p>
+                                    <a class="mu-primary-btn" href="#">Read more <span class="fa fa-long-arrow-right"></span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End single slide  -->
+            <!-- Start single slide  -->
+            <div class="mu-single-slide">
+                <img src="~/Content/Website Images/Classroom.jpg" alt="slider img" width="1550" height="670" >
+                <div class="mu-single-slide-content-area">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="mu-single-slide-content">
+                                    <h1>We Promote Good Thinking</h1>
+                                    <p>We know that alot of kids struggle to understand in schools, so we look forward to bringing the same education from schools, but giving it to the kids in a simpler and more understable way.</p>
+                                    <a class="mu-primary-btn" href="#">Read more <span class="fa fa-long-arrow-right"></span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End single slide  -->
+            <!-- Start single slide  -->
+            <div class="mu-single-slide">
+                <img src="~/Content/Website Images/Books.jpg" alt="slider img" width="1550" height="670" >
+                <div class="mu-single-slide-content-area">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="mu-single-slide-content">
+                                    <h1>We Encourage Hard Work</h1>
+                                    <p>We target to educate kids from grades 4 to 6, because that's when they begin to enter more difficult subjects, and begin to struggle.</p>
+                                    <a class="mu-primary-btn" href="#">Read more <span class="fa fa-long-arrow-right"></span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End single slide  -->
+        </div>
     </div>
-    <div class="col-md-4">
-        <h2>Get more libraries</h2>
-        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Web Hosting</h2>
-        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
-    </div>
-</div>
+    <!-- End Slider area -->
+    <!-- Start main content -->
+    <main>
+        @*<!-- Start About -->
+        <section id="mu-about">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="mu-about-area">
+                            <!-- Title -->
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="mu-title">
+                                        <h2>Who we are</h2>
+                                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa cum sociis.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Start Feature Content -->
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="mu-about-left">
+                                        <img class="" src="~/Content/assets/images/about-us.jpg" alt="img">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="mu-about-right">
+                                        <ul>
+                                            <li>
+                                                <h3>Our Mission</h3>
+                                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis,</p>
+                                            </li>
+                                            <li>
+                                                <h3>Our Vision</h3>
+                                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis,</p>
+                                            </li>
+                                            <li>
+                                                <h3>Our Valuse</h3>
+                                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis,</p>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- End Feature Content -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>*@
+        <!-- End About -->
+        <!-- Call to Action -->
+        @*<div id="mu-call-to-action">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="mu-call-to-action-area">
+                            <div class="mu-call-to-action-left">
+                                <h2>This is a simple hero unit, a simple jumbotron-style</h2>
+                                <p>component for calling extra attention to featured content or information.</p>
+                            </div>
+                            <a href="#" class="mu-primary-btn mu-quote-btn">Get a Quote <i class="fa fa-long-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>*@
+
+        <!-- Start Services -->
+        <section id="mu-service">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="mu-service-area">
+                            <!-- Title -->
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="mu-title">
+                                        <h2>The Subjects We Offer</h2>
+                                        <p>Here you can see the various different subjects that we have to offer on our site. </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Start Service Content -->
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="mu-service-content">
+                                        <div class="row">
+                                            <!-- Start single service -->
+                                            <div class="col-md-4">
+                                                <div class="mu-single-service">
+                                                    <div class="mu-single-service-icon"><i class="fa fa-clock-o" aria-hidden="true"></i></div>
+                                                    <div class="mu-single-service-content">
+                                                        <h3>Mathematics</h3>
+                                                        <p>Mathematics is the science that deals with the logic of shape, quantity and arrangement. Math is all around us, in everything we do. It is the building block for everything in our daily lives, including mobile devices, architecture (ancient and modern), art, money, engineering, and even sports.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- End single service -->
+                                            <!-- Start single service -->
+                                            <div class="col-md-4">
+                                                <div class="mu-single-service">
+                                                    <div class="mu-single-service-icon"><i class="fa fa-bullhorn" aria-hidden="true"></i></div>
+                                                    <div class="mu-single-service-content">
+                                                        <h3>Geography</h3>
+                                                        <p>Geography is the study of places and the relationships between people and their environments. Geography seeks to understand where things are found, why they are there, and how they develop and change over time.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- End single service -->
+                                            <!-- Start single service -->
+                                            <div class="col-md-4">
+                                                <div class="mu-single-service">
+                                                    <div class="mu-single-service-icon"><i class="fa fa-laptop" aria-hidden="true"></i></div>
+                                                    <div class="mu-single-service-content">
+                                                        <h3>English</h3>
+                                                        <p>The subject shall help build up general language proficiency through listening, speaking, reading and writing, and provide the opportunity to acquire information and specialised knowledge through the English language.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- End single service -->
+                                            <!-- Start single service -->
+                                            <div class="col-md-4">
+                                                <div class="mu-single-service">
+                                                    <div class="mu-single-service-icon"><i class="fa fa-mobile" aria-hidden="true"></i></div>
+                                                    <div class="mu-single-service-content">
+                                                        <h3>Life Orientation</h3>
+                                                        <p>Life Orientation addresses knowledge, values, attitudes and skills about the self, the environment, and responsible citizenship, with a healthy and productive life.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- End single service -->
+                                            <!-- Start single service -->
+                                            <div class="col-md-4">
+                                                <div class="mu-single-service">
+                                                    <div class="mu-single-service-icon"><i class="fa fa-cog" aria-hidden="true"></i></div>
+                                                    <div class="mu-single-service-content">
+                                                        <h3>History</h3>
+                                                        <p>History describes our attempts to research, study and explain the past. History is itself a collection of thousands of stories about the past, told by many different people.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- End single service -->
+                                            <!-- Start single service -->
+                                            @*<div class="col-md-4">
+                                                <div class="mu-single-service">
+                                                    <div class="mu-single-service-icon"><i class="fa fa-suitcase" aria-hidden="true"></i></div>
+                                                    <div class="mu-single-service-content">
+                                                        <h3>EMS</h3>
+                                                        <p>The study of businesses and marketing in a smaller scale.</p>
+                                                    </div>
+                                                </div>
+                                            </div>*@
+                                            <!-- End single service -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- End Service Content -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End Services -->
+        @*<!-- Start Video -->
+        <div id="mu-video">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="mu-video-left">
+                        <a href="#" class="mu-video-play-btn"><i class="fa fa-play" aria-hidden="true"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="mu-video-right">
+                        <p>In this video from our "Talking business" series, our expert discusses the role a business plan can play in the success of your business.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Start Video Popup -->
+            <div class="mu-video-popup">
+                <div class="mu-video-iframe-area">
+                    <a class="mu-video-close-btn" href="#"><i class="fa fa-times" aria-hidden="true"></i></a>
+                    <iframe width="854" height="480" src="https://www.youtube.com/embed/n9AVEl9764s" allowfullscreen></iframe>
+                </div>
+            </div>
+            <!-- End Video Popup -->
+
+        </div>
+        <!-- End Video -->*@
+
+
+
+
+        <!-- Start Counter -->
+        <section id="mu-counter" style="background-image: url('/Content/Website Images/Long Book (Crop).jpg')"; >
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="mu-counter-area">
+
+                            <div class="mu-counter-block">
+                                <div class="row">
+
+                                    <!-- Start Single Counter -->
+                                    <div class="col-md-3 col-sm-6">
+                                        <div class="mu-single-counter">
+                                            <span class="fa fa-laptop"></span>
+                                            <div class="mu-single-counter-content">
+                                                <div class="counter-value" data-count="250">0</div>
+                                                <h5 class="mu-counter-name">Projects</h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- / Single Counter -->
+                                    <!-- Start Single Counter -->
+                                    <div class="col-md-3 col-sm-6">
+                                        <div class="mu-single-counter">
+                                            <span class="fa fa-user"></span>
+                                            <div class="mu-single-counter-content">
+                                                <div class="counter-value" data-count="156">0</div>
+                                                <h5 class="mu-counter-name">Students</h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- / Single Counter -->
+                                    <!-- Start Single Counter -->
+                                    <div class="col-md-3 col-sm-6">
+                                        <div class="mu-single-counter">
+                                            <span class="fa fa-suitcase"></span>
+                                            <div class="mu-single-counter-content">
+                                                <div class="counter-value" data-count="15">0</div>
+                                                <h5 class="mu-counter-name">Teachers</h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- / Single Counter -->
+                                    <!-- Start Single Counter -->
+                                    <div class="col-md-3 col-sm-6">
+                                        <div class="mu-single-counter">
+                                            <span class="fa fa-clock-o"></span>
+                                            <div class="mu-single-counter-content">
+                                                <div class="counter-value" data-count="53">0</div>
+                                                <h5 class="mu-counter-name">Days</h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- / Single Counter -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End Counter -->
+
+
+        <!-- Start Portfolio -->
+        <section id="mu-portfolio">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="mu-portfolio-area">
+                            <!-- Title -->
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="mu-title">
+                                        <h2>Subject Classrooms</h2>
+                                        <p>Here you can find the links to each subject classroom.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <!-- Start Portfolio Filter -->
+                                <div class="mu-portfolio-filter-area">
+                                    <ul class="mu-simplefilter">
+                                        <li class="active" data-filter="all">All<span>/</span></li>
+                                        <li data-filter="1">Mathematics<span>/</span> </li>
+                                        <li data-filter="2">English<span>/</span></li>
+                                        <li data-filter="3">Life Orientation<span>/</span></li>
+                                        <li data-filter="4">History<span>/</span> </li>
+                                        <li data-filter="5">Geography</li>
+                                    </ul>
+                                </div>
+
+                                <!-- Start Portfolio Content -->
+                                <div class="mu-portfolio-content">
+                                    <div class="filtr-container">
+
+                                        <div class="col-xs-6 col-sm-6 col-md-4 filtr-item" data-category="4">
+                                            <a class="mu-imglink" href="~/Content/assets/images/portfolio/img-1.jpg" title="PAINTING">
+                                                <img class="img-responsive" src="~/Content/Website Images/History1.jpg" alt="image">
+                                                <div class="mu-filter-item-content">
+                                                    <h4 class="mu-filter-item-title">HISTORY</h4>
+                                                    <span class="fa fa-long-arrow-right"></span>
+                                                </div>
+                                            </a>
+                                        </div>
+
+                                        <div class="col-xs-6 col-sm-6 col-md-4 filtr-item" data-category="5">
+                                            <a class="mu-imglink" href="~/Content/assets/images/portfolio/img-2.jpg" title="BRANDING">
+                                                <img class="img-responsive" src="~/Content/Website Images/Geog1.jpg" alt="image">
+                                                <div class="mu-filter-item-content">
+                                                    <h4 class="mu-filter-item-title">GEOGRAPHY</h4>
+                                                    <span class="fa fa-long-arrow-right"></span>
+                                                </div>
+                                            </a>
+                                        </div>
+
+                                        <div class="col-xs-6 col-sm-6 col-md-4 filtr-item" data-category="3">
+                                            <a class="mu-imglink" href="~/Content/assets/images/portfolio/img-3.jpg" title="E-COMMERCE">
+                                                <img class="img-responsive" src="~/Content/Website Images/LO1.jpg" alt="image">
+                                                <div class="mu-filter-item-content">
+                                                    <h4 class="mu-filter-item-title">LIFE ORIENTATION</h4>
+                                                    <span class="fa fa-long-arrow-right"></span>
+                                                </div>
+                                            </a>
+                                        </div>
+
+                                        <div class="col-xs-6 col-sm-6 col-md-4 filtr-item" data-category="1">
+                                            <a class="mu-imglink" href="~/Content/assets/images/portfolio/img-4.jpg" title="WEB DESIGN">
+                                                <img class="img-responsive" src="~/Content/Website Images/Maths1.jpg" alt="image">
+                                                <div class="mu-filter-item-content">
+                                                    <h4 class="mu-filter-item-title">MATHEMATICS</h4>
+                                                    <span class="fa fa-long-arrow-right"></span>
+                                                </div>
+                                            </a>
+                                        </div>
+
+                                        <div class="col-xs-6 col-sm-6 col-md-4 filtr-item" data-category="2">
+                                            <a class="mu-imglink" href="~/Content/assets/images/portfolio/img-5.jpg" title="MOBILE DEVELOPMENT">
+                                                <img class="img-responsive" src="~/Content/Website Images/English.jpg" alt="image">
+                                                <div class="mu-filter-item-content">
+                                                    <h4 class="mu-filter-item-title">ENGLISH</h4>
+                                                    <span class="fa fa-long-arrow-right"></span>
+                                                </div>
+                                            </a>
+                                        </div>
+
+                                        <div class="col-xs-6 col-sm-6 col-md-4 filtr-item" data-category="5">
+                                            <a class="mu-imglink" href="~/Content/assets/images/portfolio/img-6.jpg" title="BRANDING">
+                                                <img class="img-responsive" src="~/Content/Website Images/Geog2.jpg" alt="image">
+                                                <div class="mu-filter-item-content">
+                                                    <h4 class="mu-filter-item-title">GEOGRAPHY</h4>
+                                                    <span class="fa fa-long-arrow-right"></span>
+                                                </div>
+                                            </a>
+                                        </div>
+
+                                        <div class="col-xs-6 col-sm-6 col-md-4 filtr-item" data-category="3">
+                                            <a class="mu-imglink" href="~/Content/assets/images/portfolio/img-7.jpg" title="E-COMMERCE">
+                                                <img class="img-responsive" src="~/Content/Website Images/LO2.png" alt="image">
+                                                <div class="mu-filter-item-content">
+                                                    <h4 class="mu-filter-item-title">LIFE ORIENTATION</h4>
+                                                    <span class="fa fa-long-arrow-right"></span>
+                                                </div>
+                                            </a>
+                                        </div>
+
+                                        <div class="col-xs-6 col-sm-6 col-md-4 filtr-item" data-category="4">
+                                            <a class="mu-imglink" href="~/Content/assets/images/portfolio/img-8.jpg" title="PAINTING">
+                                                <img class="img-responsive" src="~/Content/Website Images/History2.jpg" alt="image">
+                                                <div class="mu-filter-item-content">
+                                                    <h4 class="mu-filter-item-title">HISTORY</h4>
+                                                    <span class="fa fa-long-arrow-right"></span>
+                                                </div>
+                                            </a>
+                                        </div>
+
+                                        <div class="col-xs-6 col-sm-6 col-md-4 filtr-item" data-category="1">
+                                            <a class="mu-imglink" href="~/Content/assets/images/portfolio/img-4.jpg" title="WEB DESIGN">
+                                                <img class="img-responsive" src="~/Content/Website Images/Maths2.jpg" alt="image">
+                                                <div class="mu-filter-item-content">
+                                                    <h4 class="mu-filter-item-title">MATHEMATICS</h4>
+                                                    <span class="fa fa-long-arrow-right"></span>
+                                                </div>
+                                            </a>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <!-- End Portfolio Content -->
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End Portfolio -->
+
+        <!-- Start Client Testimonials -->
+        <section id="mu-testimonials" style="background-image: url('/Content/Website Images/Slider.jpg')"; >
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="mu-testimonials-area">
+                            <h2>Teachers' Note</h2>
+
+                            <div class="mu-testimonials-block">
+                                <ul class="mu-testimonial-slide">
+
+                                    <li>
+                                        <img class="mu-rt-img" src="~/Content/Website Images/Emma Marshall.jpg" alt="img">
+                                        <p>"Small steps in the right direction are better than big steps in the wrong direction."</p>
+                                        <h5 class="mu-rt-name">Emma Marshall</h5>
+                                        <span class="mu-rt-title">English Teacher </span>
+                                    </li>
+
+                                    <li>
+                                        <img class="mu-rt-img" src="~/Content/Website Images/John Smith.png" alt="img">
+                                        <p>"Success is not final. Failure is not fatal. It is the courage to continue that counts."</p>
+                                        <h5 class="mu-rt-name">John Smith</h5>
+                                        <span class="mu-rt-title">Mathematics Teacher</span>
+                                    </li>
+
+                                    <li>
+                                        <img class="mu-rt-img" src="~/Content/Website Images/Bobby Jones.jpg" alt="img">
+                                        <p>"Most obstacles melt away when we make up our minds to walk boldy through them."</p>
+                                        <h5 class="mu-rt-name">Bobby Jones</h5>
+                                        <span class="mu-rt-title">History Teacher </span>
+                                    </li>
+
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End Client Testimonials -->
+        <!-- Start from blog -->
+        <section id="mu-from-blog">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="mu-from-blog-area">
+                            <!-- Title -->
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="mu-title">
+                                        <h2>Quotes of Wisdom</h2>
+                                        <p>Quotes from some of the greatest minds that walked this planet.</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="mu-from-blog-content">
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <article class="mu-blog-item">
+                                                    <a href="#"><img src="~/Content/Website Images/Albert Einstein.jpg" alt="blgo image"></a>
+                                                    <div class="mu-blog-item-content">
+                                                        <ul class="mu-blog-meta">
+                                                            <li>BY: ALBERT EINSTEIN </li>
+                                                            @*<li><a href="#"><i class="fa fa-comment-o"></i>26</a></li>
+                                                            <li><i class="fa fa-heart-o"></i>250</li>*@
+                                                        </ul>
+                                                        <h2 class="mu-blog-item-title"><a href="#">A quote from Albert Einstein: </a></h2>
+                                                        <p>"The important thing is not to stop questioning. Curiosity has its own reason for existence." </p>
+                                                        @*<a class="mu-blg-readmore-btn" href="blog-single.html">Read more <i class="fa fa-long-arrow-right"></i></a>*@
+                                                    </div>
+                                                </article>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <article class="mu-blog-item">
+                                                    <a href="#"><img src="~/Content/Website Images/Pythagoras.jpg" alt="blgo image"></a>
+                                                    <div class="mu-blog-item-content">
+                                                        <ul class="mu-blog-meta">
+                                                            <li>BY: PYTHAGORAS </li>
+                                                            @*<li><a href="#"><i class="fa fa-comment-o"></i>26</a></li>
+                                                            <li><i class="fa fa-heart-o"></i>250</li>*@
+                                                        </ul>
+                                                        <h2 class="mu-blog-item-title"><a href="#">A quote from Pythagoras:</a></h2>
+                                                        <p>
+                                                            "The oldest, shortest words - 'yes' and 'no' - are those which require the most thought."
+                                                        </p>
+                                                        @*<a class="mu-blg-readmore-btn" href="blog-single.html">Read more <i class="fa fa-long-arrow-right"></i></a>*@
+                                                    </div>
+                                                </article>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <article class="mu-blog-item">
+                                                    <a href="#"><img src="~/Content/Website Images/Stephen Hawking.jpg" alt="blgo image"></a>
+                                                    <div class="mu-blog-item-content">
+                                                        <ul class="mu-blog-meta">
+                                                            <li>BY: STEPHEN HAWKING </li>
+                                                            @*<li><a href="#"><i class="fa fa-comment-o"></i>26</a></li>
+                                                            <li><i class="fa fa-heart-o"></i>250</li>*@
+                                                        </ul>
+                                                        <h2 class="mu-blog-item-title"><a href="#">A quote from Stephen Hawking:</a></h2>
+                                                        <p>
+                                                            "We are all different. There is no such thing as a standard or run-of-the-mill human being, but we share the same human spirit."
+                                                        </p>
+                                                        @*<a class="mu-blg-readmore-btn" href="blog-single.html">Read more <i class="fa fa-long-arrow-right"></i></a>*@
+                                                    </div>
+                                                </article>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End from blog -->
+        @*<!-- Start Newsletter -->
+        <section id="mu-newsletter">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="mu-newsletter-area">
+                            <!-- Title -->
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="mu-title">
+                                        <h2>Subscribe Our newsletter</h2>
+                                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa cum sociis.</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="mu-newsletter-content">
+                                        <form class="mu-subscribe-form">
+                                            <input type="email" placeholder="Write your e-mail here">
+                                            <button class="mu-subscribe-btn">Subscribe</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End Newsletter -->
+        <!-- Start Clients -->
+        <div id="mu-clients">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="mu-clients-area">
+
+                            <!-- Start Clients brand logo -->
+                            <div class="mu-clients-slider">
+
+                                <div class="mu-clients-single">
+                                    <img src="~/Content/assets/images/client-brand-1.jpg" alt="Brand Logo">
+                                </div>
+
+                                <div class="mu-clients-single">
+                                    <img src="~/Content/assets/images/client-brand-2.jpg" alt="Brand Logo">
+                                </div>
+
+                                <div class="mu-clients-single">
+                                    <img src="~/Content/assets/images/client-brand-3.jpg" alt="Brand Logo">
+                                </div>
+
+                                <div class="mu-clients-single">
+                                    <img src="~/Content/assets/images/client-brand-4.jpg" alt="Brand Logo">
+                                </div>
+
+                                <div class="mu-clients-single">
+                                    <img src="~/Content/assets/images/client-brand-5.jpg" alt="Brand Logo">
+                                </div>
+
+                                <div class="mu-clients-single">
+                                    <img src="~/Content/assets/images/client-brand-6.jpg" alt="Brand Logo">
+                                </div>
+                            </div>
+                            <!-- End Clients brand logo -->
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>*@
+        <!-- End Clients -->
+
+    </main>
+</body>

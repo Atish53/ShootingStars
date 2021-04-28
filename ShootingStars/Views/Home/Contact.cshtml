@@ -1,17 +1,106 @@
 ﻿@{
     ViewBag.Title = "Contact";
+    Layout = "~/Views/Shared/_TempLayout.cshtml";
 }
-<h2>@ViewBag.Title.</h2>
-<h3>@ViewBag.Message</h3>
+@*<h2>@ViewBag.Title.</h2>
+    <h3>@ViewBag.Message</h3>*@
 
-<address>
-    One Microsoft Way<br />
-    Redmond, WA 98052-6399<br />
-    <abbr title="Phone">P:</abbr>
-    425.555.0100
-</address>
 
-<address>
-    <strong>Support:</strong>   <a href="mailto:Support@example.com">Support@example.com</a><br />
-    <strong>Marketing:</strong> <a href="mailto:Marketing@example.com">Marketing@example.com</a>
-</address>
+<head>
+
+</head>
+
+
+<body>
+
+    <!-- Start Page Header area -->
+    <div id="mu-page-header" style="background-image: url('/Content/Website Images/HeaderImage (Crop).jpeg')"; >
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="mu-page-header-area">
+                        <h1 class="mu-page-header-title">Contact us</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Page Header area -->
+    <!-- Start Breadcrumb -->
+    <div id="mu-breadcrumb">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <nav aria-label="breadcrumb" role="navigation">
+                        <ol class="breadcrumb mu-breadcrumb">
+                            <li class="breadcrumb-item"><a href="#">Home</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Contact Us</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Breadcrumb -->
+    <!-- Start main content -->
+    <main>
+        <!-- Start Contact -->
+        <section id="mu-contact">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="mu-contact-area">
+                            <!-- Title -->
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="mu-title">
+                                        <h2>Say Hello!</h2>
+                                        <p>Send us an email if you need to speak to us about anything, and we will give you feedback on your issue as soon as possible.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Start Contact Content -->
+                            <div class="mu-contact-content">
+                                <div class="row">
+
+                                    <div class="col-md-12">
+                                        <div class="mu-contact-form-area">
+                                            <div id="form-messages"></div>
+                                            <form id="ajax-contact" method="post" action="mailer.php" class="mu-contact-form">
+
+                                                <div class="form-group">
+                                                    <span class="fa fa-user mu-contact-icon"></span>
+                                                    <input type="text" class="form-control" placeholder="Name" id="name" name="name" required>
+                                                </div>
+
+                                                <div class="form-group">
+                                                    <span class="fa fa-envelope mu-contact-icon"></span>
+                                                    <input type="email" class="form-control" placeholder="Enter Email" id="email" name="email" required>
+                                                </div>
+
+                                                <div class="form-group">
+                                                    <span class="fa fa-folder-open-o mu-contact-icon"></span>
+                                                    <input type="text" class="form-control" placeholder="Your Subject" id="subject" name="subject" required>
+                                                </div>
+
+                                                <div class="form-group">
+                                                    <span class="fa fa-pencil-square-o mu-contact-icon"></span>
+                                                    <textarea class="form-control" placeholder="Message" id="message" name="message" required></textarea>
+                                                </div>
+                                                <button type="submit" class="mu-send-msg-btn"><span>Send Message</span></button>
+                                            </form>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <!-- End Contact Content -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End Contact -->
+    </main>
+
+</body>
