@@ -1,0 +1,64 @@
+﻿@model IEnumerable<ShootingStars.Models.English4>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.English4title)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.English4Descr)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.English4Doc)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.English4Image)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.English4Teacher)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.English4TeacherImg)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.English4title)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.English4Descr)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.English4Doc)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.English4Image)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.English4Teacher)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.English4TeacherImg)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.English4Id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.English4Id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.English4Id })
+        </td>
+    </tr>
+}
+
+</table>
