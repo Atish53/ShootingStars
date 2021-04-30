@@ -1,15 +1,19 @@
-﻿using System.Data.Entity;
+﻿using System.Collections.Generic;
+using System.Data.Entity;
 using System.Security.Claims;
 using System.Threading.Tasks;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
+using System.ComponentModel.DataAnnotations;
+
+
 
 namespace ShootingStars.Models
 {
     // You can add profile data for the user by adding more properties to your ApplicationUser class, please visit https://go.microsoft.com/fwlink/?LinkID=317594 to learn more.
     public class ApplicationUser : IdentityUser
     {
-        public async Task<ClaimsIdentity> GenerateUserIdentityAsync(UserManager<ApplicationUser> manager)
+       public async Task<ClaimsIdentity> GenerateUserIdentityAsync(UserManager<ApplicationUser> manager)
         {
             // Note the authenticationType must match the one defined in CookieAuthenticationOptions.AuthenticationType
             var userIdentity = await manager.CreateIdentityAsync(this, DefaultAuthenticationTypes.ApplicationCookie);
@@ -22,11 +26,18 @@ namespace ShootingStars.Models
     {
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)
-        {
+        {            
         }
 
-        public DbSet<English4> English4 { get; set; }
-        public DbSet<English5> English5s { get; set; }
+        public DbSet<Subject> Subjects { get; set; }
+        public DbSet<Student> Students { get; set; }
+        public DbSet<Teacher> Teachers { get; set; }
+        public DbSet<Quiz> Quizzes { get; set; }
+        public DbSet<Query> Queries { get; set; }
+        public DbSet<StudentQuiz> StudentQuizzes { get; set; }
+        public DbSet<Support> Supports { get; set; }
+        public DbSet<SubjectMaterial> SubjectMaterials { get; set; }
+        public DbSet<Chat> Chats { get; set; }
 
         public static ApplicationDbContext Create()
         {

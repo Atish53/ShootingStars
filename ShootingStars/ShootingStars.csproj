@@ -182,8 +182,6 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
-    <Compile Include="Controllers\English4Controller.cs" />
-    <Compile Include="Controllers\English5Controller.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Global.asax.cs">
@@ -193,12 +191,27 @@
     <Compile Include="Migrations\202104280039570_InitialModel.designer.cs">
       <DependentUpon>202104280039570_InitialModel.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202104301238449_SubjectsDBContext.cs" />
+    <Compile Include="Migrations\202104301238449_SubjectsDBContext.designer.cs">
+      <DependentUpon>202104301238449_SubjectsDBContext.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202104301427027_ModelsDone.cs" />
+    <Compile Include="Migrations\202104301427027_ModelsDone.designer.cs">
+      <DependentUpon>202104301427027_ModelsDone.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
-    <Compile Include="Models\English4.cs" />
-    <Compile Include="Models\English5.cs" />
+    <Compile Include="Models\Chat.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\Query.cs" />
+    <Compile Include="Models\Quiz.cs" />
+    <Compile Include="Models\Student.cs" />
+    <Compile Include="Models\StudentQuiz.cs" />
+    <Compile Include="Models\Subject.cs" />
+    <Compile Include="Models\SubjectMaterial.cs" />
+    <Compile Include="Models\Support.cs" />
+    <Compile Include="Models\Teacher.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -263,16 +276,6 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
-    <Content Include="Views\English4\Create.cshtml" />
-    <Content Include="Views\English4\Delete.cshtml" />
-    <Content Include="Views\English4\Details.cshtml" />
-    <Content Include="Views\English4\Edit.cshtml" />
-    <Content Include="Views\English4\Index.cshtml" />
-    <Content Include="Views\English5\Create.cshtml" />
-    <Content Include="Views\English5\Delete.cshtml" />
-    <Content Include="Views\English5\Details.cshtml" />
-    <Content Include="Views\English5\Edit.cshtml" />
-    <Content Include="Views\English5\Index.cshtml" />
     <Content Include="Views\Shared\_LoginLayout.cshtml" />
     <Content Include="Views\Shared\_TempLayout.cshtml" />
   </ItemGroup>
@@ -295,6 +298,12 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202104280039570_InitialModel.resx">
       <DependentUpon>202104280039570_InitialModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202104301238449_SubjectsDBContext.resx">
+      <DependentUpon>202104301238449_SubjectsDBContext.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202104301427027_ModelsDone.resx">
+      <DependentUpon>202104301427027_ModelsDone.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

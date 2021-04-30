@@ -79,6 +79,17 @@ namespace ShootingStars.Models
         [Display(Name = "Confirm password")]
         [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
         public string ConfirmPassword { get; set; }
+
+        /*[Required(ErrorMessage = "Please enter your name.")]
+        [StringLength(80, MinimumLength = 10)]
+        [DataType(DataType.EmailAddress)]
+        public string StudentName { get; set; }
+
+        public List<StudentQuiz> StudentQuizzes { get; set; }
+
+        public List<Chat> Chats { get; set; }
+
+        public List<Query> Queries { get; set; }*/
     }
 
     public class ResetPasswordViewModel
