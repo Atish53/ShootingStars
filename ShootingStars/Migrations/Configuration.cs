@@ -18,14 +18,15 @@ namespace ShootingStars.Migrations
 
         protected override void Seed(ShootingStars.Models.ApplicationDbContext context)
         {
-            /*var roleStore = new RoleStore<IdentityRole>(context);
+            var roleStore = new RoleStore<IdentityRole>(context);
             var roleManager = new RoleManager<IdentityRole>(roleStore);
             var userStore = new UserStore<ApplicationUser>(context);
             var userManager = new UserManager<ApplicationUser>(userStore);
 
             roleManager.Create(new IdentityRole { Name = "Support" });
             roleManager.Create(new IdentityRole { Name = "Student" });
-            roleManager.Create(new IdentityRole { Name = "Teacher" });*/
+            roleManager.Create(new IdentityRole { Name = "Teacher" });
+            roleManager.Create(new IdentityRole { Name = "Administrator" });
 
             //  This method will be called after migrating to the latest version.
 

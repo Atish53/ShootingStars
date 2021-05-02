@@ -211,6 +211,14 @@
     <Compile Include="Migrations\202105021215127_TweaksOnModel.designer.cs">
       <DependentUpon>202105021215127_TweaksOnModel.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202105021756278_Reviews.cs" />
+    <Compile Include="Migrations\202105021756278_Reviews.designer.cs">
+      <DependentUpon>202105021756278_Reviews.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202105021757430_SeedAdmin.cs" />
+    <Compile Include="Migrations\202105021757430_SeedAdmin.designer.cs">
+      <DependentUpon>202105021757430_SeedAdmin.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Chat.cs" />
@@ -222,8 +230,10 @@
     <Compile Include="Models\StudentQuiz.cs" />
     <Compile Include="Models\Subject.cs" />
     <Compile Include="Models\SubjectMaterial.cs" />
+    <Compile Include="Models\SubjectReview.cs" />
     <Compile Include="Models\Support.cs" />
     <Compile Include="Models\Teacher.cs" />
+    <Compile Include="Models\TeacherReview.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -359,6 +369,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202105021215127_TweaksOnModel.resx">
       <DependentUpon>202105021215127_TweaksOnModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202105021756278_Reviews.resx">
+      <DependentUpon>202105021756278_Reviews.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202105021757430_SeedAdmin.resx">
+      <DependentUpon>202105021757430_SeedAdmin.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
