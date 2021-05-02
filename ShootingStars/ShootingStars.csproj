@@ -182,8 +182,16 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\ChatsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\QueriesController.cs" />
+    <Compile Include="Controllers\QuizsController.cs" />
+    <Compile Include="Controllers\StudentQuizsController.cs" />
+    <Compile Include="Controllers\SubjectMaterialsController.cs" />
+    <Compile Include="Controllers\SubjectsController.cs" />
+    <Compile Include="Controllers\SupportsController.cs" />
+    <Compile Include="Controllers\TeachersController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -195,9 +203,9 @@
     <Compile Include="Migrations\202104301238449_SubjectsDBContext.designer.cs">
       <DependentUpon>202104301238449_SubjectsDBContext.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202104301427027_ModelsDone.cs" />
-    <Compile Include="Migrations\202104301427027_ModelsDone.designer.cs">
-      <DependentUpon>202104301427027_ModelsDone.cs</DependentUpon>
+    <Compile Include="Migrations\202105021202582_ModelsFinalized.cs" />
+    <Compile Include="Migrations\202105021202582_ModelsFinalized.designer.cs">
+      <DependentUpon>202105021202582_ModelsFinalized.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -278,6 +286,46 @@
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Shared\_LoginLayout.cshtml" />
     <Content Include="Views\Shared\_TempLayout.cshtml" />
+    <Content Include="Views\Subjects\Create.cshtml" />
+    <Content Include="Views\Subjects\Delete.cshtml" />
+    <Content Include="Views\Subjects\Details.cshtml" />
+    <Content Include="Views\Subjects\Edit.cshtml" />
+    <Content Include="Views\Subjects\Index.cshtml" />
+    <Content Include="Views\Supports\Create.cshtml" />
+    <Content Include="Views\Supports\Delete.cshtml" />
+    <Content Include="Views\Supports\Details.cshtml" />
+    <Content Include="Views\Supports\Edit.cshtml" />
+    <Content Include="Views\Supports\Index.cshtml" />
+    <Content Include="Views\SubjectMaterials\Create.cshtml" />
+    <Content Include="Views\SubjectMaterials\Delete.cshtml" />
+    <Content Include="Views\SubjectMaterials\Details.cshtml" />
+    <Content Include="Views\SubjectMaterials\Edit.cshtml" />
+    <Content Include="Views\SubjectMaterials\Index.cshtml" />
+    <Content Include="Views\Teachers\Create.cshtml" />
+    <Content Include="Views\Teachers\Delete.cshtml" />
+    <Content Include="Views\Teachers\Details.cshtml" />
+    <Content Include="Views\Teachers\Edit.cshtml" />
+    <Content Include="Views\Teachers\Index.cshtml" />
+    <Content Include="Views\Quizs\Create.cshtml" />
+    <Content Include="Views\Quizs\Delete.cshtml" />
+    <Content Include="Views\Quizs\Details.cshtml" />
+    <Content Include="Views\Quizs\Edit.cshtml" />
+    <Content Include="Views\Quizs\Index.cshtml" />
+    <Content Include="Views\StudentQuizs\Create.cshtml" />
+    <Content Include="Views\StudentQuizs\Delete.cshtml" />
+    <Content Include="Views\StudentQuizs\Details.cshtml" />
+    <Content Include="Views\StudentQuizs\Edit.cshtml" />
+    <Content Include="Views\StudentQuizs\Index.cshtml" />
+    <Content Include="Views\Chats\Create.cshtml" />
+    <Content Include="Views\Chats\Delete.cshtml" />
+    <Content Include="Views\Chats\Details.cshtml" />
+    <Content Include="Views\Chats\Edit.cshtml" />
+    <Content Include="Views\Chats\Index.cshtml" />
+    <Content Include="Views\Queries\Create.cshtml" />
+    <Content Include="Views\Queries\Delete.cshtml" />
+    <Content Include="Views\Queries\Details.cshtml" />
+    <Content Include="Views\Queries\Edit.cshtml" />
+    <Content Include="Views\Queries\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -302,8 +350,8 @@
     <EmbeddedResource Include="Migrations\202104301238449_SubjectsDBContext.resx">
       <DependentUpon>202104301238449_SubjectsDBContext.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202104301427027_ModelsDone.resx">
-      <DependentUpon>202104301427027_ModelsDone.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202105021202582_ModelsFinalized.resx">
+      <DependentUpon>202105021202582_ModelsFinalized.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

@@ -1,0 +1,42 @@
+﻿@model ShootingStars.Models.SubjectMaterial
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>SubjectMaterial</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Subjects.SubjectName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Subjects.SubjectName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MaterialFile)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MaterialFile)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MaterialName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MaterialName)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.SubjectMaterialID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

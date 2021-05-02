@@ -1,0 +1,51 @@
+﻿@model IEnumerable<ShootingStars.Models.Subject>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Teacher.TeacherName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SubjectName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SubjectGrade)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SubjectDescription)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Teacher.TeacherName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SubjectName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SubjectGrade)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SubjectDescription)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.SubjectID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.SubjectID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.SubjectID })
+        </td>
+    </tr>
+}
+
+</table>

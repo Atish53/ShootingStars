@@ -16,7 +16,7 @@ namespace ShootingStars.Models
         [Key]
         public int ChatID { get; set; }
 
-        public int StudentID { get; set; }
+        public string StudentEmail { get; set; }
 
         public int TeacherID { get; set; }
 

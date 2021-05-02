@@ -15,7 +15,7 @@ namespace ShootingStars.Models
         [Key]
         public int StudentQuizID { get; set; }
 
-        public int StudentID { get; set; }
+        public string StudentEmail { get; set; }
 
         public int QuizID { get; set; }
 

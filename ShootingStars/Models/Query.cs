@@ -15,7 +15,7 @@ namespace ShootingStars.Models
         [Key]
         public int QueryID { get; set; }
 
-        public int StudentID { get; set; }
+        public string StudentEmail { get; set; }
 
         [Required(ErrorMessage = "Please enter a valid query.")]
         [StringLength(300)]
