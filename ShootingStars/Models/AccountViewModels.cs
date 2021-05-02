@@ -83,14 +83,17 @@ namespace ShootingStars.Models
         [Required(ErrorMessage = "Please enter your name.")]
         [StringLength(80, MinimumLength = 10)]
         [DataType(DataType.EmailAddress)]
+        [Display(Name = "Full Name")]
         public string StudentName { get; set; }
 
         [Required(ErrorMessage = "Please enter your E-mail address.")]
         [StringLength(120)]
+        [Display(Name = "Confirm Email")]
         public string StudentEmail { get; set; }
 
         [Required(ErrorMessage = "Please enter your phone number. ")]
         [StringLength(10)]
+        [Display(Name = "Cell/Telephone Number")]
         public string StudentPhoneNumber { get; set; }
 
         public List<StudentQuiz> StudentQuizzes { get; set; }

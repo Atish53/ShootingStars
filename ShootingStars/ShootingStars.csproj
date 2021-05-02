@@ -207,6 +207,10 @@
     <Compile Include="Migrations\202105021202582_ModelsFinalized.designer.cs">
       <DependentUpon>202105021202582_ModelsFinalized.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202105021215127_TweaksOnModel.cs" />
+    <Compile Include="Migrations\202105021215127_TweaksOnModel.designer.cs">
+      <DependentUpon>202105021215127_TweaksOnModel.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Chat.cs" />
@@ -352,6 +356,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202105021202582_ModelsFinalized.resx">
       <DependentUpon>202105021202582_ModelsFinalized.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202105021215127_TweaksOnModel.resx">
+      <DependentUpon>202105021215127_TweaksOnModel.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

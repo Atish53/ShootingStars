@@ -151,7 +151,7 @@ namespace ShootingStars.Controllers
         {
             if (ModelState.IsValid)
             {
-                var user = new ApplicationUser { UserName = model.Email, Email = model.Email, StudentEmail = model.Email, StudentPhoneNumber = model.StudentPhoneNumber, StudentName = model.StudentName };
+                var user = new ApplicationUser { UserName = model.StudentName, Email = model.Email, StudentEmail = model.Email, StudentPhoneNumber = model.StudentPhoneNumber, StudentName = model.StudentName };
                 var result = await UserManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
                 {
