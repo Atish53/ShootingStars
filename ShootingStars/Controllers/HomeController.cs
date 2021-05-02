@@ -23,5 +23,11 @@ namespace ShootingStars.Controllers
             return View();
         }
 
+
+        public ActionResult AdminPanel()
+        {
+            return View();
+        }
+
     }
 }

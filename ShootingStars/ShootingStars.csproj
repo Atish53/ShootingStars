@@ -195,10 +195,6 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202104280039570_InitialModel.cs" />
-    <Compile Include="Migrations\202104280039570_InitialModel.designer.cs">
-      <DependentUpon>202104280039570_InitialModel.cs</DependentUpon>
-    </Compile>
     <Compile Include="Migrations\202104301238449_SubjectsDBContext.cs" />
     <Compile Include="Migrations\202104301238449_SubjectsDBContext.designer.cs">
       <DependentUpon>202104301238449_SubjectsDBContext.cs</DependentUpon>
@@ -218,6 +214,10 @@
     <Compile Include="Migrations\202105021757430_SeedAdmin.cs" />
     <Compile Include="Migrations\202105021757430_SeedAdmin.designer.cs">
       <DependentUpon>202105021757430_SeedAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202105021906374_InitialModel.cs" />
+    <Compile Include="Migrations\202105021906374_InitialModel.designer.cs">
+      <DependentUpon>202105021906374_InitialModel.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -340,6 +340,7 @@
     <Content Include="Views\Queries\Details.cshtml" />
     <Content Include="Views\Queries\Edit.cshtml" />
     <Content Include="Views\Queries\Index.cshtml" />
+    <Content Include="Views\Home\AdminPanel.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -358,9 +359,6 @@
     <Folder Include="Content\Subject Images\" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202104280039570_InitialModel.resx">
-      <DependentUpon>202104280039570_InitialModel.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202104301238449_SubjectsDBContext.resx">
       <DependentUpon>202104301238449_SubjectsDBContext.cs</DependentUpon>
     </EmbeddedResource>
@@ -375,6 +373,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202105021757430_SeedAdmin.resx">
       <DependentUpon>202105021757430_SeedAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202105021906374_InitialModel.resx">
+      <DependentUpon>202105021906374_InitialModel.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
