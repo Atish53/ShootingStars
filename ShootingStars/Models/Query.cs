@@ -10,6 +10,7 @@ using System.Web.Mvc;
 
 namespace ShootingStars.Models
 {
+   
     public class Query
     {
         [Key]
@@ -21,9 +22,9 @@ namespace ShootingStars.Models
         [StringLength(300)]
         public string Message { get; set; }
 
-        [Required(ErrorMessage = "Product is required")]
-        
-        public string Type { get; set; }
+        [Required(ErrorMessage = "Please select the type of issue you are experiencing")]
+        [Display(Name = "Type Of Query.")]
+        public string QueryType { get; set; }
 
         public string Response { get; set; }
 
