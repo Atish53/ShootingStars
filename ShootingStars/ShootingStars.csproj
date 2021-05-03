@@ -190,6 +190,7 @@
     <Compile Include="Controllers\SubjectMaterialsController.cs" />
     <Compile Include="Controllers\SubjectsController.cs" />
     <Compile Include="Controllers\SupportsController.cs" />
+    <Compile Include="Controllers\TeacherReviewsController.cs" />
     <Compile Include="Controllers\TeachersController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -197,6 +198,10 @@
     <Compile Include="Migrations\202105031745414_Query.cs" />
     <Compile Include="Migrations\202105031745414_Query.Designer.cs">
       <DependentUpon>202105031745414_Query.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202105032050060_TeacherReview.cs" />
+    <Compile Include="Migrations\202105032050060_TeacherReview.Designer.cs">
+      <DependentUpon>202105032050060_TeacherReview.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -356,6 +361,12 @@
     <Content Include="Views\SubjectMaterials\Details.cshtml" />
     <Content Include="Views\SubjectMaterials\Edit.cshtml" />
     <Content Include="Views\SubjectMaterials\Index.cshtml" />
+    <Content Include="Views\TeacherReviews\Create.cshtml" />
+    <Content Include="Views\TeacherReviews\Delete.cshtml" />
+    <Content Include="Views\TeacherReviews\Details.cshtml" />
+    <Content Include="Views\TeacherReviews\Edit.cshtml" />
+    <Content Include="Views\TeacherReviews\Index.cshtml" />
+    <Content Include="Views\TeacherReviews\Thanks.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -373,6 +384,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202105031745414_Query.resx">
       <DependentUpon>202105031745414_Query.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202105032050060_TeacherReview.resx">
+      <DependentUpon>202105032050060_TeacherReview.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
