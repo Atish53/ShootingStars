@@ -22,6 +22,13 @@ namespace ShootingStars.Controllers
             return View(await subjects.ToListAsync());
         }
 
+        public ActionResult ViewSubjectMaterial(int id)
+        {
+            var subjectMaterial = db.SubjectMaterials.Where(x => x.SubjectID == id).ToList();
+
+            return View(subjectMaterial);
+        }
+
         // GET: Subjects/Details/5
         public async Task<ActionResult> Details(int? id)
         {

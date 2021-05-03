@@ -1,0 +1,39 @@
+﻿@model IEnumerable<ShootingStars.Models.SubjectMaterial>
+
+@{
+    ViewBag.Title = "ViewSubjectMaterial";
+    Layout = "~/Views/Shared/_TempLayout.cshtml";
+}
+
+<h2>ViewSubjectMaterial</h2>
+
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Subjects.SubjectName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MaterialFile)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MaterialName)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Subjects.SubjectName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MaterialFile)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MaterialName)
+        </td>
+    </tr>
+}
+
+</table>

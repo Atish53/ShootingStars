@@ -199,9 +199,9 @@
     <Compile Include="Migrations\202105031745414_Query.Designer.cs">
       <DependentUpon>202105031745414_Query.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202105032050060_TeacherReview.cs" />
-    <Compile Include="Migrations\202105032050060_TeacherReview.Designer.cs">
-      <DependentUpon>202105032050060_TeacherReview.cs</DependentUpon>
+    <Compile Include="Migrations\202105032139393_InitalModel.cs" />
+    <Compile Include="Migrations\202105032139393_InitalModel.Designer.cs">
+      <DependentUpon>202105032139393_InitalModel.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -367,6 +367,7 @@
     <Content Include="Views\TeacherReviews\Edit.cshtml" />
     <Content Include="Views\TeacherReviews\Index.cshtml" />
     <Content Include="Views\TeacherReviews\Thanks.cshtml" />
+    <Content Include="Views\Subjects\ViewSubjectMaterial.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -385,8 +386,8 @@
     <EmbeddedResource Include="Migrations\202105031745414_Query.resx">
       <DependentUpon>202105031745414_Query.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202105032050060_TeacherReview.resx">
-      <DependentUpon>202105032050060_TeacherReview.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202105032139393_InitalModel.resx">
+      <DependentUpon>202105032139393_InitalModel.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

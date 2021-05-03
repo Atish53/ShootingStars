@@ -13,7 +13,7 @@
     @foreach (var item in Model)
     {
         <tr>
-            <section id="mu-from-blog">
+            <section>
                 <div class="container">
                     <div class="row">
                         <div class="col-md-12">
@@ -25,7 +25,7 @@
                                             <div class="row">
                                                 <div class="col-md-4">
                                                     <article class="mu-blog-item">
-                                                        <a href="#"><img src="@Url.Content(item.SubjectImg)" alt=""></a>
+                                                        <a href="@Url.Action("ViewSubjectMaterial", new { id = item.SubjectID})"><img src="@Url.Content(item.SubjectImg)" alt=""></a>
                                                         <div class="mu-blog-item-content">
                                                             <ul class="mu-blog-meta">
                                                                 <h3>@item.SubjectName</h3>
