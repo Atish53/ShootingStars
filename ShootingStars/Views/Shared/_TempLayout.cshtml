@@ -56,6 +56,7 @@
                         <li class="nav-item">@Html.ActionLink("Home", "Index", "Home")</li>
                         <li class="nav-item">@Html.ActionLink("About", "About", "Home")</li>
                         <li class="nav-item">@Html.ActionLink("Contact", "Contact", "Home")</li>
+                        <li class="nav-item">@Html.ActionLink("Grade", "Grade", "Home")</li>
                         @if (Request.IsAuthenticated && User.IsInRole("Administrator"))
                         {
                             <li class="nav-item">@Html.ActionLink("Admin Panel", "AdminPanel", "Home")</li>
@@ -64,7 +65,7 @@
                         {
                             <li class="nav-item">@Html.ActionLink("Supports", "Index", "Supports")</li>
                         }
-                        <li class="nav-item">@Html.ActionLink("Ask A Question", "Create", "Queries")</li   >
+                        <li class="nav-item">@Html.ActionLink("Ask A Question", "Create", "Queries")</li>
 
 
 
