@@ -9,6 +9,8 @@ using System.Web;
 using System.Web.Mvc;
 using ShootingStars.Models;
 
+
+
 namespace ShootingStars.Controllers
 {
     public class QueriesController : Controller
@@ -47,15 +49,16 @@ namespace ShootingStars.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> Create([Bind(Include = "QueryID,StudentEmail,Message,Type,Response,DateCreated,CompletionStatus")] Query query)
+        public async Task<ActionResult> Create([Bind(Include = "QueryID,Message,Type")] Query query)
         {
             if (ModelState.IsValid)
             {
+                query.StudentEmail = User.Identity.GetStudentEmail();
+                query.DateCreated = DateTime.Now;
                 db.Queries.Add(query);
                 await db.SaveChangesAsync();
                 return RedirectToAction("Index");
             }
-
             return View(query);
         }
 

@@ -219,9 +219,26 @@
     <Compile Include="Migrations\202105021906374_InitialModel.designer.cs">
       <DependentUpon>202105021906374_InitialModel.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202105031418252_Claims.cs" />
+    <Compile Include="Migrations\202105031418252_Claims.designer.cs">
+      <DependentUpon>202105031418252_Claims.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202105031453555_QueryWithNewArray.cs" />
+    <Compile Include="Migrations\202105031453555_QueryWithNewArray.designer.cs">
+      <DependentUpon>202105031453555_QueryWithNewArray.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202105031512401_Query.cs" />
+    <Compile Include="Migrations\202105031512401_Query.designer.cs">
+      <DependentUpon>202105031512401_Query.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202105031706389_QueryType.cs" />
+    <Compile Include="Migrations\202105031706389_QueryType.designer.cs">
+      <DependentUpon>202105031706389_QueryType.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Chat.cs" />
+    <Compile Include="Models\IdentityExtensions.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\Query.cs" />
@@ -376,6 +393,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202105021906374_InitialModel.resx">
       <DependentUpon>202105021906374_InitialModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202105031418252_Claims.resx">
+      <DependentUpon>202105031418252_Claims.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202105031453555_QueryWithNewArray.resx">
+      <DependentUpon>202105031453555_QueryWithNewArray.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202105031512401_Query.resx">
+      <DependentUpon>202105031512401_Query.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202105031706389_QueryType.resx">
+      <DependentUpon>202105031706389_QueryType.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
