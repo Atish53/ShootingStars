@@ -56,5 +56,7 @@ namespace ShootingStars.Models
         {
             return new ApplicationDbContext();
         }
+
+        public System.Data.Entity.DbSet<ShootingStars.Models.TeacherReview> TeacherReviews { get; set; }
     }
 }

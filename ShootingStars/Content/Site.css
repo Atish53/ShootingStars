@@ -22,3 +22,50 @@ select,
 textarea {
     max-width: 280px;
 }
+
+a1 {
+    color: white;
+    font: 50px Times New Roman, Serif;
+}
+
+a12 {
+    color: white;
+    font: 20px Times New Roman, Serif;
+}
+
+a2 {
+    color: black;
+    font: 50px Times New Roman, Serif;
+}
+
+a3 {
+    color: black;
+    font: 25px Times New Roman, Serif;
+}
+
+a4 {
+    color: black;
+    font: 20px Times New Roman, Serif;
+}
+
+body {
+    background-color: cornsilk;
+    background-image: url('Website Images/tile.png');
+    margin: 0;
+    padding: 0;
+}
+
+
+
+.center-div {
+    margin: auto;
+    width: 50%;
+    border: 2px solid yellow;
+    padding: 10px;
+}
+
+.center-img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
