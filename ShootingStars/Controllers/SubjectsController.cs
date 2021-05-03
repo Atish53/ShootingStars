@@ -49,7 +49,7 @@ namespace ShootingStars.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> Create([Bind(Include = "SubjectID,SubjectName,SubjectGrade,SubjectDescription,TeacherID")] Subject subject)
+        public async Task<ActionResult> Create([Bind(Include = "SubjectID,SubjectName,SubjectGrade,SubjectDescription,TeacherID,SubjectImg")] Subject subject)
         {
             if (ModelState.IsValid)
             {
@@ -83,7 +83,7 @@ namespace ShootingStars.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> Edit([Bind(Include = "SubjectID,SubjectName,SubjectGrade,SubjectDescription,TeacherID")] Subject subject)
+        public async Task<ActionResult> Edit([Bind(Include = "SubjectID,SubjectName,SubjectGrade,SubjectDescription,TeacherID,SubjectImg")] Subject subject)
         {
             if (ModelState.IsValid)
             {
@@ -119,6 +119,20 @@ namespace ShootingStars.Controllers
             db.Subjects.Remove(subject);
             await db.SaveChangesAsync();
             return RedirectToAction("Index");
+        }
+
+        public ActionResult Subject4()
+        {
+            var subject = db.Subjects.Where(x => x.SubjectGrade == 4).ToList();
+
+            return View(subject);
+        }
+
+        public ActionResult Subject5()
+        {
+            var subject = db.Subjects.Where(x => x.SubjectGrade == 5).ToList();
+
+            return View(subject);
         }
 
         protected override void Dispose(bool disposing)

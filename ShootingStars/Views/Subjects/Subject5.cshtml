@@ -1,0 +1,45 @@
+﻿@model IEnumerable<ShootingStars.Models.Subject>
+
+@{
+    ViewBag.Title = "Subject5";
+    Layout = "~/Views/Shared/_TempLayout.cshtml";
+}
+
+<h2>Subject5</h2>
+
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Teacher.TeacherName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SubjectName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SubjectGrade)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SubjectDescription)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Teacher.TeacherName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SubjectName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SubjectGrade)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SubjectDescription)
+        </td>
+    </tr>
+}
+
+</table>

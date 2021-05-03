@@ -22,5 +22,8 @@ namespace ShootingStars.Models
         public string MaterialName { get; set; }
 
         public virtual Subject Subjects { get; set; }
+
+        [NotMapped]
+        public HttpPostedFileBase DocFile { get; set; }
     }
 }

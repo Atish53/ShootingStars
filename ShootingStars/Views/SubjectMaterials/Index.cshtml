@@ -30,7 +30,7 @@
             @Html.DisplayFor(modelItem => item.Subjects.SubjectName)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.MaterialFile)
+            <button><a href="@item.MaterialFile">Download</a></button>
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.MaterialName)

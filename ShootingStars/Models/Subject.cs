@@ -23,6 +23,8 @@ namespace ShootingStars.Models
 
         public int TeacherID { get; set; }
 
+        public string SubjectImg { get; set; }
+
         public virtual Teacher Teacher { get; set; }
 
         public List<SubjectMaterial> SubjectMaterials { get; set; }

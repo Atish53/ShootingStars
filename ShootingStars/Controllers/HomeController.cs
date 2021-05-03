@@ -29,5 +29,10 @@ namespace ShootingStars.Controllers
             return View();
         }
 
+        public ActionResult Grade()
+        {
+            return View();
+        }
+
     }
 }
