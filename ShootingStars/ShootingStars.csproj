@@ -194,45 +194,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202104301238449_SubjectsDBContext.cs" />
-    <Compile Include="Migrations\202104301238449_SubjectsDBContext.designer.cs">
-      <DependentUpon>202104301238449_SubjectsDBContext.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202105021202582_ModelsFinalized.cs" />
-    <Compile Include="Migrations\202105021202582_ModelsFinalized.designer.cs">
-      <DependentUpon>202105021202582_ModelsFinalized.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202105021215127_TweaksOnModel.cs" />
-    <Compile Include="Migrations\202105021215127_TweaksOnModel.designer.cs">
-      <DependentUpon>202105021215127_TweaksOnModel.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202105021756278_Reviews.cs" />
-    <Compile Include="Migrations\202105021756278_Reviews.designer.cs">
-      <DependentUpon>202105021756278_Reviews.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202105021757430_SeedAdmin.cs" />
-    <Compile Include="Migrations\202105021757430_SeedAdmin.designer.cs">
-      <DependentUpon>202105021757430_SeedAdmin.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202105031354045_InitialModel.cs" />
-    <Compile Include="Migrations\202105031354045_InitialModel.Designer.cs">
-      <DependentUpon>202105031354045_InitialModel.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202105031418252_Claims.cs" />
-    <Compile Include="Migrations\202105031418252_Claims.designer.cs">
-      <DependentUpon>202105031418252_Claims.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202105031453555_QueryWithNewArray.cs" />
-    <Compile Include="Migrations\202105031453555_QueryWithNewArray.designer.cs">
-      <DependentUpon>202105031453555_QueryWithNewArray.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202105031512401_Query.cs" />
-    <Compile Include="Migrations\202105031512401_Query.designer.cs">
-      <DependentUpon>202105031512401_Query.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202105031706389_QueryType.cs" />
-    <Compile Include="Migrations\202105031706389_QueryType.designer.cs">
-      <DependentUpon>202105031706389_QueryType.cs</DependentUpon>
+    <Compile Include="Migrations\202105031745414_Query.cs" />
+    <Compile Include="Migrations\202105031745414_Query.Designer.cs">
+      <DependentUpon>202105031745414_Query.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -379,37 +343,9 @@
     <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.3.1.min.map" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202104301238449_SubjectsDBContext.resx">
-      <DependentUpon>202104301238449_SubjectsDBContext.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202105021202582_ModelsFinalized.resx">
-      <DependentUpon>202105021202582_ModelsFinalized.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202105021215127_TweaksOnModel.resx">
-      <DependentUpon>202105021215127_TweaksOnModel.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202105021756278_Reviews.resx">
-      <DependentUpon>202105021756278_Reviews.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202105021757430_SeedAdmin.resx">
-      <DependentUpon>202105021757430_SeedAdmin.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202105031354045_InitialModel.resx">
-      <DependentUpon>202105031354045_InitialModel.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202105031418252_Claims.resx">
-      <DependentUpon>202105031418252_Claims.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202105031453555_QueryWithNewArray.resx">
-      <DependentUpon>202105031453555_QueryWithNewArray.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202105031512401_Query.resx">
-      <DependentUpon>202105031512401_Query.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202105031706389_QueryType.resx">
-      <DependentUpon>202105031706389_QueryType.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202105031745414_Query.resx">
+      <DependentUpon>202105031745414_Query.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
