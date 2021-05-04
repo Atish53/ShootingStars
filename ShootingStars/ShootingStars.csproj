@@ -199,13 +199,9 @@
     <Compile Include="Migrations\202105031745414_Query.Designer.cs">
       <DependentUpon>202105031745414_Query.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202105032139393_InitalModel.cs" />
-    <Compile Include="Migrations\202105032139393_InitalModel.Designer.cs">
-      <DependentUpon>202105032139393_InitalModel.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202105040047327_MaterialUpload.cs" />
-    <Compile Include="Migrations\202105040047327_MaterialUpload.Designer.cs">
-      <DependentUpon>202105040047327_MaterialUpload.cs</DependentUpon>
+    <Compile Include="Migrations\202105041007253_InitialModel.cs" />
+    <Compile Include="Migrations\202105041007253_InitialModel.Designer.cs">
+      <DependentUpon>202105041007253_InitialModel.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -390,11 +386,8 @@
     <EmbeddedResource Include="Migrations\202105031745414_Query.resx">
       <DependentUpon>202105031745414_Query.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202105032139393_InitalModel.resx">
-      <DependentUpon>202105032139393_InitalModel.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202105040047327_MaterialUpload.resx">
-      <DependentUpon>202105040047327_MaterialUpload.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202105041007253_InitialModel.resx">
+      <DependentUpon>202105041007253_InitialModel.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
