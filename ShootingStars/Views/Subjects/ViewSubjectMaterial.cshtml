@@ -5,35 +5,59 @@
     Layout = "~/Views/Shared/_TempLayout.cshtml";
 }
 
-<h2>ViewSubjectMaterial</h2>
+<style>
+    #paragraph {
+        background-color: snow;
+        width: 600px;
+        border: 15px solid lightgrey;
+        padding: 50px;
+        margin: 20px auto;
+        text-align: center;
+    }
+</style>
+
+<!-- Start Page Header area -->
+<div id="mu-page-header" style="background-image: url('/Content/Website Images/HeaderImage (Crop).jpeg')" ;>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="mu-page-header-area">
+                    <h1 class="mu-page-header-title">Subject Material</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Page Header area -->
+<!-- Start Breadcrumb -->
+<div id="mu-breadcrumb">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <nav aria-label="breadcrumb" role="navigation">
+                    <ol class="breadcrumb mu-breadcrumb">
+                        <li class="breadcrumb-item"><a href="#">Home</a></li>
+                        <li class="breadcrumb-item"><a href="#">Grade</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Subject Material</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+    </div>
+</div>
+
+&ensp;&ensp;&ensp;&ensp;
 
 
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.Subjects.SubjectName)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.MaterialFile)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.MaterialName)
-        </th>
-        <th></th>
-    </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Subjects.SubjectName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.MaterialFile)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.MaterialName)
-        </td>
-    </tr>
+@foreach (var item in Model)
+{
+
+    <div id="paragraph">
+        <h2>@item.MaterialName</h2>
+        <p>Subject: @item.Subjects.SubjectName</p>
+        <p>@item.MaterialFile</p>
+    </div>
 }
 
-</table>
+

@@ -4,6 +4,14 @@
     Layout = "~/Views/Shared/_TempLayout.cshtml";
 }
 
+<style>
+    #align {
+
+        margin: 20px auto;
+        text-align: center;
+    }
+</style>
+
 <!-- Start Page Header area -->
 <div id="mu-page-header" style="background-image: url('/Content/Website Images/HeaderImage (Crop).jpeg')" ;>
     <div class="container">
@@ -33,15 +41,17 @@
     </div>
 </div>
 
-<p>
-    <a href="@Url.Action("Subject4", "Subjects")">
-        <img src="~/Content/Subject Images/4th.png" alt="" style="width:250px;height:250px;">
-    </a>
-</p>
+<div id="align">
+    <p>
+        <a href="@Url.Action("Subject4", "Subjects")">
+            <img src="~/Content/Subject Images/4th.png" alt="" style="width:400px;height:400px">
+        </a>
+    </p>
 
-<p>
-    <a href="@Url.Action("Subject5", "Subjects")">
-        <img src="~/Content/Subject Images/5th.png" alt="" style="width:250px;height:250px;">
-    </a>
-</p>
+    <p>
+        <a href="@Url.Action("Subject5", "Subjects")">
+            <img src="~/Content/Subject Images/5th.png" alt="" style="width:400px;height:400px">
+        </a>
+    </p>
+</div>
 

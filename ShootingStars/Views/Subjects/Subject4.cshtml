@@ -5,41 +5,78 @@
     Layout = "~/Views/Shared/_TempLayout.cshtml";
 }
 
-<h3 style="align-content:center">4th Grade</h3>
+<style>
+    #align {
+        margin: 20px auto;
+        text-align: center;
+    }
+</style>
+
+<!-- Start Page Header area -->
+<div id="mu-page-header" style="background-image: url('/Content/Website Images/HeaderImage (Crop).jpeg')" ;>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="mu-page-header-area">
+                    <h1 class="mu-page-header-title">4th Grade</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Page Header area -->
+<!-- Start Breadcrumb -->
+<div id="mu-breadcrumb">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <nav aria-label="breadcrumb" role="navigation">
+                    <ol class="breadcrumb mu-breadcrumb">
+                        <li class="breadcrumb-item"><a href="#">Home</a></li>
+                        <li class="breadcrumb-item"><a href="#">Grade</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">4th Grade</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+    </div>
+</div>
 
 
-
-@foreach (var item in Model) {
-    <tr>
-        <section >
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="mu-from-blog-area">
-                            <!-- Title -->
-                            <div class="row" style="display:flex">
-                                <div class="col-md-12">
-                                    <div class="mu-from-blog-content">
-                                        <div class="row">
-                                            <div class="col-md-4">
-                                                <article class="mu-blog-item">
-                                                    <a href="@Url.Action("ViewSubjectMaterial", new { id = item.SubjectID})"><img src="@Url.Content(item.SubjectImg)" alt=""></a>
-                                                    <div class="mu-blog-item-content">
-                                                        <ul class="mu-blog-meta">
-                                                            <h3>@item.SubjectName</h3>
-                                                            @*<li><a href="#"><i class="fa fa-comment-o"></i>26</a></li>
-                                                            <li><i class="fa fa-heart-o"></i>250</li>*@
-                                                        </ul>
-                                                        <h2 class="mu-blog-item-title"><a href="#">Grade: @item.SubjectGrade</a></h2>
-                                                        <p>
-                                                            Description: @item.SubjectDescription
-                                                        </p>
-                                                        <p>
-                                                            Teacher: @item.Teacher.TeacherName
-                                                        </p>
-                                                        @*<a class="mu-blg-readmore-btn" href="blog-single.html">Read more <i class="fa fa-long-arrow-right"></i></a>*@
-                                                    </div>
-                                                </article>
+<table id="align">
+    @foreach (var item in Model)
+    {
+        <tr>
+            <section>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="mu-from-blog-area">
+                                <!-- Title -->
+                                <div class="row" style="display:flex">
+                                    <div class="col-md-12">
+                                        <div class="mu-from-blog-content">
+                                            <div class="row">
+                                                <div class="col-md-4">
+                                                    <article class="mu-blog-item">
+                                                        <a href="@Url.Action("ViewSubjectMaterial", new { id = item.SubjectID})"><img src="@Url.Content(item.SubjectImg)" alt=""></a>
+                                                        <div class="mu-blog-item-content">
+                                                            <ul class="mu-blog-meta">
+                                                                <h3>@item.SubjectName</h3>
+                                                                @*<li><a href="#"><i class="fa fa-comment-o"></i>26</a></li>
+                                                                    <li><i class="fa fa-heart-o"></i>250</li>*@
+                                                            </ul>
+                                                            <h2 class="mu-blog-item-title"><a href="#">Grade: @item.SubjectGrade</a></h2>
+                                                            <p>
+                                                                Description: @item.SubjectDescription
+                                                            </p>
+                                                            <p>
+                                                                Teacher: @item.Teacher.TeacherName
+                                                            </p>
+                                                            @*<a class="mu-blg-readmore-btn" href="blog-single.html">Read more <i class="fa fa-long-arrow-right"></i></a>*@
+                                                        </div>
+                                                    </article>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -48,11 +85,11 @@
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
 
-    </tr>
-}
+        </tr>
+    }
+</table>
 
 
 
