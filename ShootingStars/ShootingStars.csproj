@@ -188,6 +188,7 @@
     <Compile Include="Controllers\QuizsController.cs" />
     <Compile Include="Controllers\StudentQuizsController.cs" />
     <Compile Include="Controllers\SubjectMaterialsController.cs" />
+    <Compile Include="Controllers\SubjectReviewsController.cs" />
     <Compile Include="Controllers\SubjectsController.cs" />
     <Compile Include="Controllers\SupportsController.cs" />
     <Compile Include="Controllers\TeacherReviewsController.cs" />
@@ -195,17 +196,13 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202105031745414_Query.cs" />
-    <Compile Include="Migrations\202105031745414_Query.Designer.cs">
-      <DependentUpon>202105031745414_Query.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202105041007253_InitialModel.cs" />
-    <Compile Include="Migrations\202105041007253_InitialModel.Designer.cs">
-      <DependentUpon>202105041007253_InitialModel.cs</DependentUpon>
-    </Compile>
     <Compile Include="Migrations\202105041432107_QueryTpes.cs" />
     <Compile Include="Migrations\202105041432107_QueryTpes.Designer.cs">
       <DependentUpon>202105041432107_QueryTpes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202105042017227_InitialModel.cs" />
+    <Compile Include="Migrations\202105042017227_InitialModel.Designer.cs">
+      <DependentUpon>202105042017227_InitialModel.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -374,6 +371,12 @@
     <Content Include="Views\Subjects\ViewSubjectMaterial.cshtml" />
     <Content Include="Views\Queries\Success.cshtml" />
     <Content Include="Views\Manage\ViewQueries.cshtml" />
+    <Content Include="Views\SubjectReviews\Create.cshtml" />
+    <Content Include="Views\SubjectReviews\Delete.cshtml" />
+    <Content Include="Views\SubjectReviews\Details.cshtml" />
+    <Content Include="Views\SubjectReviews\Edit.cshtml" />
+    <Content Include="Views\SubjectReviews\Index.cshtml" />
+    <Content Include="Views\SubjectReviews\Thanks.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -389,14 +392,11 @@
     <Content Include="Scripts\jquery-3.3.1.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202105031745414_Query.resx">
-      <DependentUpon>202105031745414_Query.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202105041007253_InitialModel.resx">
-      <DependentUpon>202105041007253_InitialModel.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202105041432107_QueryTpes.resx">
       <DependentUpon>202105041432107_QueryTpes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202105042017227_InitialModel.resx">
+      <DependentUpon>202105042017227_InitialModel.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

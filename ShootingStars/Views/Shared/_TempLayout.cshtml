@@ -55,7 +55,7 @@
 
                         <li class="nav-item">@Html.ActionLink("Home", "Index", "Home")</li>
                         <li class="nav-item">@Html.ActionLink("About", "About", "Home")</li>
-                        <li class="nav-item">@Html.ActionLink("Grade", "Grade", "Home")</li>
+                        <li class="nav-item">@Html.ActionLink("Grades", "Grade", "Home")</li>
                         @if (Request.IsAuthenticated && User.IsInRole("Administrator"))
                         {
                             <li class="nav-item">@Html.ActionLink("Admin Panel", "AdminPanel", "Home")</li>
