@@ -46,7 +46,7 @@ namespace ShootingStars.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ID,Grade,Class,Name,Q1,Q2,Q3,Q4,Q5,Q6,Q7,Q8,Q9,Q10")] TeacherReview teacherReview)
+        public ActionResult Create([Bind(Include = "ID,Grade,Class,Name,Q1,Q2,Q3,Q4,Q5,Q6,Q7,Q8,Q9,Q10")] TeacherReview teacherReview) 
         {
             if (ModelState.IsValid)
             {

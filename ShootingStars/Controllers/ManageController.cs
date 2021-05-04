@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Web;
@@ -15,6 +17,8 @@ namespace ShootingStars.Controllers
     {
         private ApplicationSignInManager _signInManager;
         private ApplicationUserManager _userManager;
+
+        private ApplicationDbContext db = new ApplicationDbContext();
 
         public ManageController()
         {
@@ -72,6 +76,16 @@ namespace ShootingStars.Controllers
                 Logins = await UserManager.GetLoginsAsync(userId),
                 BrowserRemembered = await AuthenticationManager.TwoFactorBrowserRememberedAsync(userId)
             };
+
+            string studentEmail = User.Identity.GetStudentEmail();
+            var Queries = from query in db.Queries
+                          where query.StudentEmail == User.Identity.GetStudentEmail()
+                          select query;
+
+            int numQueries = 0;
+            
+            ViewData["Queries"] = numQueries;
+
             return View(model);
         }
 
@@ -320,6 +334,23 @@ namespace ShootingStars.Controllers
             }
             var result = await UserManager.AddLoginAsync(User.Identity.GetUserId(), loginInfo.Login);
             return result.Succeeded ? RedirectToAction("ManageLogins") : RedirectToAction("ManageLogins", new { Message = ManageMessageId.Error });
+        }
+
+
+        //
+        // GET: /Manage/Queries
+        /*public List<Query> ViewQueries()
+        {
+            string studentEmail = User.Identity.GetStudentEmail();
+
+            var query = db.Queries.Where(email => email.StudentEmail == studentEmail).ToList();
+            return (query);
+        }*/
+
+        // GET: Queries
+        public async Task<ActionResult> ViewQueries()
+        {
+            return View(await db.Queries.ToListAsync());
         }
 
         protected override void Dispose(bool disposing)

@@ -5,49 +5,117 @@
     Layout = "~/Views/Shared/_TempLayout.cshtml";
 }
 
-<h2>Create</h2>
-
-
-@using (Html.BeginForm()) 
-{
-    @Html.AntiForgeryToken()
-    
-<div class="form-horizontal">
-    <h4>Query</h4>
-    <hr />
-    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-    @Html.HiddenFor(model => model.StudentEmail)
-    @Html.HiddenFor(model => model.DateCreated)
-    @Html.HiddenFor(model => model.Response)
-    @Html.HiddenFor(model => model.CompletionStatus)
-    <div class="form-group">
-        @Html.LabelFor(model => model.Message, htmlAttributes: new { @class = "control-label col-md-2" })
-        <div class="col-md-10">
-            @Html.EditorFor(model => model.Message, new { htmlAttributes = new { @class = "form-control" } })
-            @Html.ValidationMessageFor(model => model.Message, "", new { @class = "text-danger" })
-        </div>
-    </div>
-
-    <div class="form-group">
-        @Html.LabelFor(model => model.QueryType, htmlAttributes: new { @class = "control-label col-md-2" })
-        <div class="col-md-10">
-            @Html.EditorFor(model => model.QueryType, new { htmlAttributes = new { @class = "form-control" } })
-            @Html.ValidationMessageFor(model => model.QueryType, "", new { @class = "text-danger" })
-        </div>
-    </div>
-
-    <div class="form-group">
-        <div class="col-md-offset-2 col-md-10">
-            <input type="submit" value="Create" class="btn btn-default" />
+<!-- Start Page Header area -->
+<div id="mu-page-header" style="background-image: url('/Content/Website Images/HeaderImage (Crop).jpeg')" ;>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="mu-page-header-area">
+                    <h1 class="mu-page-header-title">Queries</h1>
+                </div>
+            </div>
         </div>
     </div>
 </div>
-}
-
-<div>
-    @Html.ActionLink("Back to List", "Index")
+<!-- End Page Header area -->
+<!-- Start Breadcrumb -->
+<div id="mu-breadcrumb">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <nav aria-label="breadcrumb" role="navigation">
+                    <ol class="breadcrumb mu-breadcrumb">
+                        <li class="breadcrumb-item"><a href="#">Home</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Ask A Question</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+    </div>
 </div>
+<!-- End Breadcrumb -->
+<!-- Start main content -->
+<main>
+    <!-- Start Contact -->
+    <section id="mu-contact">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="mu-contact-area">
+                        <!-- Title -->
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="mu-title">
+                                    <h2>Problem?</h2>
+                                    <p>Experiencing difficulties with our website? Drop us a message here, and we will give you feedback on your issue as soon as possible.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Start Contact Content -->
+                        <div class="mu-contact-content">
+                            <div class="row">
 
-@section Scripts {
-    @Scripts.Render("~/bundles/jqueryval")
-}
+                                <div class="col-md-12">
+                                    <div class="mu-contact-form-area">
+                                        @using (Html.BeginForm())
+                                        {
+                                            @Html.AntiForgeryToken()
+
+                                            <div class="form-horizontal">
+                                                <h4>Query</h4>
+                                                <hr />
+                                                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                                                @Html.HiddenFor(model => model.StudentEmail)
+                                                @Html.HiddenFor(model => model.DateCreated)
+                                                @Html.HiddenFor(model => model.Response)
+                                                @Html.HiddenFor(model => model.CompletionStatus)
+
+                                            <div class="form-group">
+                                                @Html.LabelFor(model => model.QueryTypes, htmlAttributes: new { @class = "control-label col-md-2" })
+                                                <div class="">
+                                                    @Html.EditorFor(model => model.QueryTypes, new { htmlAttributes = new { @class = "form-control" } })
+                                                    @Html.ValidationMessageFor(model => model.QueryTypes, "", new { @class = "text-danger" })
+                                                </div>
+                                            </div>
+
+                                                <div class="form-group">
+                                                    @Html.LabelFor(model => model.Message, htmlAttributes: new { @class = "control-label col-md-2" })
+                                                    <div class="">
+                                                        @Html.EditorFor(model => model.Message, new { htmlAttributes = new { @class = "form-control" } })
+                                                        @Html.ValidationMessageFor(model => model.Message, "", new { @class = "text-danger" })
+                                                    </div>
+                                                </div>
+
+                                                <div class="form-group">
+                                                    <div class="col-md-offset-2 col-md-10">
+                                                        <input type="submit" value="Send Query" class="btn btn-success"/>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        }
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <!-- End Contact Content -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Contact -->
+    }
+
+    <div>
+        @Html.ActionLink("Back to List", "Index")
+    </div>
+
+    @section Scripts {
+        @Scripts.Render("~/bundles/jqueryval")
+    }
+
+
+
+
+</main>

@@ -203,6 +203,10 @@
     <Compile Include="Migrations\202105041007253_InitialModel.Designer.cs">
       <DependentUpon>202105041007253_InitialModel.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202105041432107_QueryTpes.cs" />
+    <Compile Include="Migrations\202105041432107_QueryTpes.Designer.cs">
+      <DependentUpon>202105041432107_QueryTpes.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Chat.cs" />
@@ -368,6 +372,8 @@
     <Content Include="Views\TeacherReviews\Index.cshtml" />
     <Content Include="Views\TeacherReviews\Thanks.cshtml" />
     <Content Include="Views\Subjects\ViewSubjectMaterial.cshtml" />
+    <Content Include="Views\Queries\Success.cshtml" />
+    <Content Include="Views\Manage\ViewQueries.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -388,6 +394,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202105041007253_InitialModel.resx">
       <DependentUpon>202105041007253_InitialModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202105041432107_QueryTpes.resx">
+      <DependentUpon>202105041432107_QueryTpes.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

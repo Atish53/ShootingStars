@@ -7,9 +7,6 @@
 
 <h2>Index</h2>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
 <table class="table">
     <tr>
         <th>
@@ -19,7 +16,7 @@
             @Html.DisplayNameFor(model => model.Message)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Type)
+            @Html.DisplayNameFor(model => model.QueryTypes)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.Response)
@@ -42,7 +39,7 @@
             @Html.DisplayFor(modelItem => item.Message)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.Type)
+            @Html.DisplayFor(modelItem => item.QueryTypes)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.Response)
@@ -54,9 +51,7 @@
             @Html.DisplayFor(modelItem => item.CompletionStatus)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.QueryID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.QueryID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.QueryID })
+            @Html.ActionLink("Respond", "Edit", new { id=item.QueryID })           
         </td>
     </tr>
 }

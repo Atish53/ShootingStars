@@ -22,9 +22,9 @@ namespace ShootingStars.Models
         [StringLength(300)]
         public string Message { get; set; }
 
-        [Required(ErrorMessage = "Please select the type of issue you are experiencing")]
-        [Display(Name = "Type Of Query.")]
-        public string QueryType { get; set; }
+        [Required]
+        [Display(Name = "Select a query type")]
+        public string QueryTypes { get; set; }
 
         public string Response { get; set; }
 
