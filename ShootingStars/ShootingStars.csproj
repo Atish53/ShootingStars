@@ -203,6 +203,10 @@
     <Compile Include="Migrations\202105032139393_InitalModel.Designer.cs">
       <DependentUpon>202105032139393_InitalModel.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202105040047327_MaterialUpload.cs" />
+    <Compile Include="Migrations\202105040047327_MaterialUpload.Designer.cs">
+      <DependentUpon>202105040047327_MaterialUpload.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Chat.cs" />
@@ -233,8 +237,8 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Subject Images\4th.png" />
     <Content Include="Content\Subject Images\5th.png" />
-    <Content Include="Content\Subject Material\0_Fortnite-leaks212451131.jpg" />
-    <Content Include="Content\Subject Material\681958213125159.jpg" />
+    <Content Include="Content\SubjectMaterial\0_Fortnite-leaks212451131.jpg" />
+    <Content Include="Content\SubjectMaterial\681958213125159.jpg" />
     <Content Include="Content\Website Images\Albert Einstein.jpg" />
     <Content Include="Content\Website Images\AppleBook %28Crop%29.jpg" />
     <Content Include="Content\Website Images\Bobby Jones.jpg" />
@@ -269,7 +273,7 @@
     <Content Include="Content\Site.css" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
-    <Content Include="Content\Subject Material\ch01%281%29211822651.zip" />
+    <Content Include="Content\SubjectMaterial\ch01%281%29211822651.zip" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />
@@ -388,6 +392,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202105032139393_InitalModel.resx">
       <DependentUpon>202105032139393_InitalModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202105040047327_MaterialUpload.resx">
+      <DependentUpon>202105040047327_MaterialUpload.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

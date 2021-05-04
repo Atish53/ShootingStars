@@ -49,16 +49,29 @@ namespace ShootingStars.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "SubjectMaterialID,SubjectID,MaterialFile,MaterialName,DocFile")] SubjectMaterial subjectMaterial)
+        public ActionResult Create([Bind(Include = "SubjectMaterialID,SubjectID,MaterialFile,MaterialName,DocFile")] SubjectMaterial subjectMaterial, HttpPostedFileBase UploadMaterial)
         {
             if (ModelState.IsValid)
             {
-                string fileName = Path.GetFileNameWithoutExtension(subjectMaterial.DocFile.FileName);
-                string extension = Path.GetExtension(subjectMaterial.DocFile.FileName);
-                fileName = fileName + DateTime.Now.ToString("yymmssfff") + extension;
-                subjectMaterial.MaterialFile = "~/Content/Subject Material/" + fileName;
-                fileName = Path.Combine(Server.MapPath("~/Content/Subject Material/"), fileName);
-                subjectMaterial.DocFile.SaveAs(fileName);
+                //string fileName = Path.GetFileNameWithoutExtension(subjectMaterial.DocFile.FileName);
+                //string extension = Path.GetExtension(subjectMaterial.DocFile.FileName);
+                //fileName = fileName + DateTime.Now.ToString("yymmssfff") + extension;
+                //subjectMaterial.MaterialFile = "~/Content/SubjectMaterial/" + fileName;
+                //fileName = Path.Combine(Server.MapPath("~/Content/SubjectMaterial/"), fileName);
+                //subjectMaterial.DocFile.SaveAs(fileName);
+
+                if (UploadMaterial != null)
+                {
+                    UploadMaterial.SaveAs(Server.MapPath("/") + "/Content/SubjectMaterial/" + UploadMaterial.FileName);
+                    subjectMaterial.MaterialFile = UploadMaterial.FileName;
+                }
+                else
+                {
+                    return View();
+                }
+
+
+
 
                 db.SubjectMaterials.Add(subjectMaterial);
                 db.SaveChanges();
@@ -90,10 +103,21 @@ namespace ShootingStars.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "SubjectMaterialID,SubjectID,MaterialFile,MaterialName")] SubjectMaterial subjectMaterial)
+        public ActionResult Edit([Bind(Include = "SubjectMaterialID,SubjectID,MaterialFile,MaterialName")] SubjectMaterial subjectMaterial, HttpPostedFileBase UploadMaterial)
         {
             if (ModelState.IsValid)
             {
+                if (UploadMaterial != null)
+                {
+                    UploadMaterial.SaveAs(Server.MapPath("/") + "/Content/SubjectMaterial/" + UploadMaterial.FileName);
+                    subjectMaterial.MaterialFile = UploadMaterial.FileName;
+                }
+                else
+                {
+                    return View();
+                }
+
+
                 db.Entry(subjectMaterial).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
@@ -136,5 +160,6 @@ namespace ShootingStars.Controllers
             }
             base.Dispose(disposing);
         }
+
     }
 }
