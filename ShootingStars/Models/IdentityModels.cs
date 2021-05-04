@@ -58,5 +58,7 @@ namespace ShootingStars.Models
         }
 
         public System.Data.Entity.DbSet<ShootingStars.Models.TeacherReview> TeacherReviews { get; set; }
+
+        public System.Data.Entity.DbSet<ShootingStars.Models.SubjectReview> SubjectReviews { get; set; }
     }
 }

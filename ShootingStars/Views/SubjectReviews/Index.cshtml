@@ -1,0 +1,96 @@
+﻿@model IEnumerable<ShootingStars.Models.SubjectReview>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_TempLayout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Subject.SubjectName)
+        </th>
+      
+        <th>
+            @Html.DisplayNameFor(model => model.Question1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Question2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Question3)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Question4)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Question5)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Question6)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Question7)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Question8)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Question9)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Question10)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Subject.SubjectName)
+        </td>
+        
+        <td>
+            @Html.DisplayFor(modelItem => item.Question1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Question2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Question3)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Question4)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Question5)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Question6)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Question7)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Question8)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Question9)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Question10)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ID })
+        </td>
+    </tr>
+}
+
+</table>
