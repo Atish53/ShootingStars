@@ -204,6 +204,10 @@
     <Compile Include="Migrations\202105042017227_InitialModel.Designer.cs">
       <DependentUpon>202105042017227_InitialModel.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202105050107549_Quiz.cs" />
+    <Compile Include="Migrations\202105050107549_Quiz.Designer.cs">
+      <DependentUpon>202105050107549_Quiz.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Chat.cs" />
@@ -333,11 +337,6 @@
     <Content Include="Views\Teachers\Details.cshtml" />
     <Content Include="Views\Teachers\Edit.cshtml" />
     <Content Include="Views\Teachers\Index.cshtml" />
-    <Content Include="Views\Quizs\Create.cshtml" />
-    <Content Include="Views\Quizs\Delete.cshtml" />
-    <Content Include="Views\Quizs\Details.cshtml" />
-    <Content Include="Views\Quizs\Edit.cshtml" />
-    <Content Include="Views\Quizs\Index.cshtml" />
     <Content Include="Views\StudentQuizs\Create.cshtml" />
     <Content Include="Views\StudentQuizs\Delete.cshtml" />
     <Content Include="Views\StudentQuizs\Details.cshtml" />
@@ -377,6 +376,11 @@
     <Content Include="Views\SubjectReviews\Edit.cshtml" />
     <Content Include="Views\SubjectReviews\Index.cshtml" />
     <Content Include="Views\SubjectReviews\Thanks.cshtml" />
+    <Content Include="Views\Quizs\Create.cshtml" />
+    <Content Include="Views\Quizs\Delete.cshtml" />
+    <Content Include="Views\Quizs\Details.cshtml" />
+    <Content Include="Views\Quizs\Edit.cshtml" />
+    <Content Include="Views\Quizs\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -397,6 +401,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202105042017227_InitialModel.resx">
       <DependentUpon>202105042017227_InitialModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202105050107549_Quiz.resx">
+      <DependentUpon>202105050107549_Quiz.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
