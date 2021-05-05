@@ -6,154 +6,183 @@
 }
 
 
+<!-- Start Page Header area -->
+<div id="mu-page-header" style="background-image: url('/Content/Website Images/HeaderImage (Crop).jpeg')" ;>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="mu-page-header-area">
+                    <h1 class="mu-page-header-title">Subject Review</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Page Header area -->
+<!-- Start Breadcrumb -->
+<div id="mu-breadcrumb">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <nav aria-label="breadcrumb" role="navigation">
+                    <ol class="breadcrumb mu-breadcrumb">
+                        <li class="breadcrumb-item"><a href="#">Home</a></li>
+                        <li class="breadcrumb-item"><a href="#">Subject Review</a></li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+    </div>
+</div>
+
+    &ensp;&ensp;
+
+
 @using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
 
-<div class="form-horizontal">
-    <br />
-    <h4>SubjectReview</h4>
+    <div class="form-horizontal">
+        <br />
+        <h4>SubjectReview</h4>
 
-    <hr />
-    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
 
-    <div class="form-group">
-        @Html.LabelFor(model => model.SubjectID, "SubjectID", htmlAttributes: new { @class = "control-label col-md-2" })
-        <div class="col-md-10">
-            @Html.DropDownList("SubjectID", null, htmlAttributes: new { @class = "form-control" })
-            @Html.ValidationMessageFor(model => model.SubjectID, "", new { @class = "text-danger" })
+        <div class="form-group">
+            @Html.LabelFor(model => model.SubjectID, "SubjectID", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownList("SubjectID", null, htmlAttributes: new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.SubjectID, "", new { @class = "text-danger" })
+            </div>
         </div>
-    </div>
 
-    <br> <br>
-    <div class="form-group">
-        <h4><b>@Html.LabelFor(model => model.Question1, htmlAttributes: new { @class = "control-label col-md-2" })</b></h4>
-        <div class="col-md-10">
-            Yes:
-            @Html.RadioButtonFor(model => model.Question1, "Yes") &nbsp;&nbsp;&nbsp;&nbsp;
-            No:
-            @Html.RadioButtonFor(model => model.Question1, "No")&nbsp;&nbsp;&nbsp;&nbsp;
-            Unsure:
-            @Html.RadioButtonFor(model => model.Question1, "Unsure") &nbsp;&nbsp;&nbsp;&nbsp;
+        <br> <br>
+        <div class="form-group">
+            <h4><b>@Html.LabelFor(model => model.Question1, htmlAttributes: new { @class = "control-label col-md-2" })</b></h4>
+            <div class="col-md-10">
+                Yes:
+                @Html.RadioButtonFor(model => model.Question1, "Yes") &nbsp;&nbsp;&nbsp;&nbsp;
+                No:
+                @Html.RadioButtonFor(model => model.Question1, "No")&nbsp;&nbsp;&nbsp;&nbsp;
+                Unsure:
+                @Html.RadioButtonFor(model => model.Question1, "Unsure") &nbsp;&nbsp;&nbsp;&nbsp;
+            </div>
         </div>
-    </div>
-    <br> <br>
-    <div class="form-group">
-        <h4><b>@Html.LabelFor(model => model.Question2, htmlAttributes: new { @class = "control-label col-md-2" })</b></h4>
-        <div class="col-md-10">
-            Yes:
-            @Html.RadioButtonFor(model => model.Question2, "Yes") &nbsp;&nbsp;&nbsp;&nbsp;
-            No:
-            @Html.RadioButtonFor(model => model.Question2, "No") &nbsp;&nbsp;&nbsp;&nbsp;
-            Unsure:
-            @Html.RadioButtonFor(model => model.Question2, "Unsure") &nbsp;&nbsp;&nbsp;&nbsp;
+        <br> <br>
+        <div class="form-group">
+            <h4><b>@Html.LabelFor(model => model.Question2, htmlAttributes: new { @class = "control-label col-md-2" })</b></h4>
+            <div class="col-md-10">
+                Yes:
+                @Html.RadioButtonFor(model => model.Question2, "Yes") &nbsp;&nbsp;&nbsp;&nbsp;
+                No:
+                @Html.RadioButtonFor(model => model.Question2, "No") &nbsp;&nbsp;&nbsp;&nbsp;
+                Unsure:
+                @Html.RadioButtonFor(model => model.Question2, "Unsure") &nbsp;&nbsp;&nbsp;&nbsp;
+            </div>
         </div>
-    </div>
-    <br> <br>
-    <div class="form-group">
-        <h4><b>@Html.LabelFor(model => model.Question3, htmlAttributes: new { @class = "control-label col-md-2" })</b></h4>
-        <div class="col-md-10">
-            Yes:
-            @Html.RadioButtonFor(model => model.Question3, "Yes") &nbsp;&nbsp;&nbsp;&nbsp;
-            No:
-            @Html.RadioButtonFor(model => model.Question3, "No") &nbsp;&nbsp;&nbsp;&nbsp;
-            Unsure:
-            @Html.RadioButtonFor(model => model.Question3, "Unsure") &nbsp;&nbsp;&nbsp;&nbsp;
+        <br> <br>
+        <div class="form-group">
+            <h4><b>@Html.LabelFor(model => model.Question3, htmlAttributes: new { @class = "control-label col-md-2" })</b></h4>
+            <div class="col-md-10">
+                Yes:
+                @Html.RadioButtonFor(model => model.Question3, "Yes") &nbsp;&nbsp;&nbsp;&nbsp;
+                No:
+                @Html.RadioButtonFor(model => model.Question3, "No") &nbsp;&nbsp;&nbsp;&nbsp;
+                Unsure:
+                @Html.RadioButtonFor(model => model.Question3, "Unsure") &nbsp;&nbsp;&nbsp;&nbsp;
+            </div>
         </div>
-    </div>
-    <br> <br>
-    <div class="form-group">
-        <h4><b>@Html.LabelFor(model => model.Question4, htmlAttributes: new { @class = "control-label col-md-2" })</b></h4>
-        <div class="col-md-10">
-            Yes:
-            @Html.RadioButtonFor(model => model.Question4, "Yes") &nbsp;&nbsp;&nbsp;&nbsp;
-            No:
-            @Html.RadioButtonFor(model => model.Question4, "No") &nbsp;&nbsp;&nbsp;&nbsp;
-            Unsure:
-            @Html.RadioButtonFor(model => model.Question4, "Unsure") &nbsp;&nbsp;&nbsp;&nbsp;
+        <br> <br>
+        <div class="form-group">
+            <h4><b>@Html.LabelFor(model => model.Question4, htmlAttributes: new { @class = "control-label col-md-2" })</b></h4>
+            <div class="col-md-10">
+                Yes:
+                @Html.RadioButtonFor(model => model.Question4, "Yes") &nbsp;&nbsp;&nbsp;&nbsp;
+                No:
+                @Html.RadioButtonFor(model => model.Question4, "No") &nbsp;&nbsp;&nbsp;&nbsp;
+                Unsure:
+                @Html.RadioButtonFor(model => model.Question4, "Unsure") &nbsp;&nbsp;&nbsp;&nbsp;
+            </div>
         </div>
-    </div>
-    <br> <br>
-    <div class="form-group">
-        <h4><b>@Html.LabelFor(model => model.Question5, htmlAttributes: new { @class = "control-label col-md-2" })</b></h4>
-        <div class="col-md-10">
-            Yes:
-            @Html.RadioButtonFor(model => model.Question5, "Yes") &nbsp;&nbsp;&nbsp;&nbsp;
-            No:
-            @Html.RadioButtonFor(model => model.Question5, "No") &nbsp;&nbsp;&nbsp;&nbsp;
-            Unsure:
-            @Html.RadioButtonFor(model => model.Question5, "Unsure") &nbsp;&nbsp;&nbsp;&nbsp;
+        <br> <br>
+        <div class="form-group">
+            <h4><b>@Html.LabelFor(model => model.Question5, htmlAttributes: new { @class = "control-label col-md-2" })</b></h4>
+            <div class="col-md-10">
+                Yes:
+                @Html.RadioButtonFor(model => model.Question5, "Yes") &nbsp;&nbsp;&nbsp;&nbsp;
+                No:
+                @Html.RadioButtonFor(model => model.Question5, "No") &nbsp;&nbsp;&nbsp;&nbsp;
+                Unsure:
+                @Html.RadioButtonFor(model => model.Question5, "Unsure") &nbsp;&nbsp;&nbsp;&nbsp;
+            </div>
         </div>
-    </div>
-    <br> <br>
-    <div class="form-group">
-        <h4><b>@Html.LabelFor(model => model.Question6, htmlAttributes: new { @class = "control-label col-md-2" })</b></h4>
-        <div class="col-md-10">
-            Yes:
-            @Html.RadioButtonFor(model => model.Question6, "Yes") &nbsp;&nbsp;&nbsp;&nbsp;
-            No:
-            @Html.RadioButtonFor(model => model.Question6, "No") &nbsp;&nbsp;&nbsp;&nbsp;
-            Unsure:
-            @Html.RadioButtonFor(model => model.Question6, "Unsure") &nbsp;&nbsp;&nbsp;&nbsp;
+        <br> <br>
+        <div class="form-group">
+            <h4><b>@Html.LabelFor(model => model.Question6, htmlAttributes: new { @class = "control-label col-md-2" })</b></h4>
+            <div class="col-md-10">
+                Yes:
+                @Html.RadioButtonFor(model => model.Question6, "Yes") &nbsp;&nbsp;&nbsp;&nbsp;
+                No:
+                @Html.RadioButtonFor(model => model.Question6, "No") &nbsp;&nbsp;&nbsp;&nbsp;
+                Unsure:
+                @Html.RadioButtonFor(model => model.Question6, "Unsure") &nbsp;&nbsp;&nbsp;&nbsp;
+            </div>
         </div>
-    </div>
-    <br> <br>
-    <div class="form-group">
-        <h4><b>@Html.LabelFor(model => model.Question7, htmlAttributes: new { @class = "control-label col-md-2" })</b></h4>
-        <div class="col-md-10">
-            Yes:
-            @Html.RadioButtonFor(model => model.Question7, "Yes") &nbsp;&nbsp;&nbsp;&nbsp;
-            No:
-            @Html.RadioButtonFor(model => model.Question7, "No") &nbsp;&nbsp;&nbsp;&nbsp;
-            Unsure:
-            @Html.RadioButtonFor(model => model.Question7, "Unsure") &nbsp;&nbsp;&nbsp;&nbsp;
+        <br> <br>
+        <div class="form-group">
+            <h4><b>@Html.LabelFor(model => model.Question7, htmlAttributes: new { @class = "control-label col-md-2" })</b></h4>
+            <div class="col-md-10">
+                Yes:
+                @Html.RadioButtonFor(model => model.Question7, "Yes") &nbsp;&nbsp;&nbsp;&nbsp;
+                No:
+                @Html.RadioButtonFor(model => model.Question7, "No") &nbsp;&nbsp;&nbsp;&nbsp;
+                Unsure:
+                @Html.RadioButtonFor(model => model.Question7, "Unsure") &nbsp;&nbsp;&nbsp;&nbsp;
+            </div>
         </div>
-    </div>
-    <br> <br>
-    <div class="form-group">
-        <h4><b>@Html.LabelFor(model => model.Question8, htmlAttributes: new { @class = "control-label col-md-2" })</b></h4>
-        <div class="col-md-10">
-            Yes:
-            @Html.RadioButtonFor(model => model.Question8, "Yes") &nbsp;&nbsp;&nbsp;&nbsp;
-            No:
-            @Html.RadioButtonFor(model => model.Question8, "No") &nbsp;&nbsp;&nbsp;&nbsp;
-            Unsure:
-            @Html.RadioButtonFor(model => model.Question8, "Unsure") &nbsp;&nbsp;&nbsp;&nbsp;
+        <br> <br>
+        <div class="form-group">
+            <h4><b>@Html.LabelFor(model => model.Question8, htmlAttributes: new { @class = "control-label col-md-2" })</b></h4>
+            <div class="col-md-10">
+                Yes:
+                @Html.RadioButtonFor(model => model.Question8, "Yes") &nbsp;&nbsp;&nbsp;&nbsp;
+                No:
+                @Html.RadioButtonFor(model => model.Question8, "No") &nbsp;&nbsp;&nbsp;&nbsp;
+                Unsure:
+                @Html.RadioButtonFor(model => model.Question8, "Unsure") &nbsp;&nbsp;&nbsp;&nbsp;
+            </div>
         </div>
-    </div>
-    <br> <br>
-    <div class="form-group">
-        <h4><b>@Html.LabelFor(model => model.Question9, htmlAttributes: new { @class = "control-label col-md-2" })</b></h4>
-        <div class="col-md-10">
-            Yes:
-            @Html.RadioButtonFor(model => model.Question9, "Yes") &nbsp;&nbsp;&nbsp;&nbsp;
-            No:
-            @Html.RadioButtonFor(model => model.Question9, "No")  &nbsp;&nbsp;&nbsp;&nbsp;
-            Unsure:
-            @Html.RadioButtonFor(model => model.Question9, "Unsure") &nbsp;&nbsp;&nbsp;&nbsp;
+        <br> <br>
+        <div class="form-group">
+            <h4><b>@Html.LabelFor(model => model.Question9, htmlAttributes: new { @class = "control-label col-md-2" })</b></h4>
+            <div class="col-md-10">
+                Yes:
+                @Html.RadioButtonFor(model => model.Question9, "Yes") &nbsp;&nbsp;&nbsp;&nbsp;
+                No:
+                @Html.RadioButtonFor(model => model.Question9, "No")  &nbsp;&nbsp;&nbsp;&nbsp;
+                Unsure:
+                @Html.RadioButtonFor(model => model.Question9, "Unsure") &nbsp;&nbsp;&nbsp;&nbsp;
+            </div>
         </div>
-    </div>
-    <br> <br>
-    <div class="form-group">
-        <h4><b>@Html.LabelFor(model => model.Question10, htmlAttributes: new { @class = "control-label col-md-2" })</b></h4>
-        <div class="col-md-10">
-            @Html.TextAreaFor(model => model.Question10)
+        <br> <br>
+        <div class="form-group">
+            <h4><b>@Html.LabelFor(model => model.Question10, htmlAttributes: new { @class = "control-label col-md-2" })</b></h4>
+            <div class="col-md-10">
+                @Html.TextAreaFor(model => model.Question10)
 
+            </div>
         </div>
-    </div>
 
 
-    <div class="form-group">
-        <div class="col-md-offset-2 col-md-10">
-            <input type="submit" value="Submit" class="btn btn-default" />
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Submit" class="btn btn-success" />
+            </div>
         </div>
     </div>
-</div>
 }
 
-<div>
-    @Html.ActionLink("Back to List", "Index")
-</div>
 
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")

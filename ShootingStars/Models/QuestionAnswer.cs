@@ -14,6 +14,7 @@ namespace ShootingStars.Models
     {
         [Key]
         public int QuestionAnswerID { get; set; }
+
         public int QuizID { get; set; }
 
         public string Question { get; set; }

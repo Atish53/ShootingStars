@@ -213,6 +213,14 @@
     <Compile Include="Migrations\202105051326128_MigrationOK.Designer.cs">
       <DependentUpon>202105051326128_MigrationOK.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202105051748283_StudentQuizUpdate.cs" />
+    <Compile Include="Migrations\202105051748283_StudentQuizUpdate.Designer.cs">
+      <DependentUpon>202105051748283_StudentQuizUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202105052105150_New.cs" />
+    <Compile Include="Migrations\202105052105150_New.Designer.cs">
+      <DependentUpon>202105052105150_New.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Chat.cs" />
@@ -347,7 +355,6 @@
     <Content Include="Views\StudentQuizs\Delete.cshtml" />
     <Content Include="Views\StudentQuizs\Details.cshtml" />
     <Content Include="Views\StudentQuizs\Edit.cshtml" />
-    <Content Include="Views\StudentQuizs\Index.cshtml" />
     <Content Include="Views\Chats\Create.cshtml" />
     <Content Include="Views\Chats\Delete.cshtml" />
     <Content Include="Views\Chats\Details.cshtml" />
@@ -392,6 +399,9 @@
     <Content Include="Views\QuestionAnswers\Details.cshtml" />
     <Content Include="Views\QuestionAnswers\Edit.cshtml" />
     <Content Include="Views\QuestionAnswers\Index.cshtml" />
+    <Content Include="Views\Subjects\AttemptQuiz.cshtml" />
+    <Content Include="Views\StudentQuizs\AttemptQuiz.cshtml" />
+    <Content Include="Views\StudentQuizs\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -418,6 +428,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202105051326128_MigrationOK.resx">
       <DependentUpon>202105051326128_MigrationOK.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202105051748283_StudentQuizUpdate.resx">
+      <DependentUpon>202105051748283_StudentQuizUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202105052105150_New.resx">
+      <DependentUpon>202105052105150_New.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

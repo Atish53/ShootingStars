@@ -148,6 +148,21 @@ namespace ShootingStars.Controllers
             return RedirectToAction("Index");
         }
 
+        // GET: SubjectMaterials/Delete/5
+        public ActionResult AttemptQuiz(int? id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            Quiz quiz = db.Quizzes.Find(id);
+            if (quiz == null)
+            {
+                return HttpNotFound();
+            }
+            return RedirectToAction("Edit","Quiz", id);
+        }
+
         protected override void Dispose(bool disposing)
         {
             if (disposing)

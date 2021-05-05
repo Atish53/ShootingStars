@@ -19,11 +19,7 @@ namespace ShootingStars.Models
 
         public int QuizID { get; set; }
 
-        public DateTime StartTime { get; set; }
-
-        public DateTime EndTime { get; set; }
-
-        public DateTime Duration { get; set; }
+        public DateTime DateAttempted { get; set; }
 
         public int Mark { get; set; }
 

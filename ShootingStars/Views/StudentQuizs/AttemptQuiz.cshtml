@@ -1,0 +1,38 @@
+﻿@model ShootingStars.Models.Quiz
+
+@{
+    ViewBag.Title = "AttemptQuiz";
+    Layout = "~/Views/Shared/_TempLayout.cshtml";
+}
+
+@using (Html.BeginForm())
+
+{
+    @Html.AntiForgeryToken()
+    @Html.HiddenFor(m => m.QuizID)
+    
+
+    <h2>AttemptQuiz</h2>
+
+    <h1>@ViewData["Q1"]</h1>
+
+    <input type="text" name="Answer1" />
+
+    <h1>@ViewData["Q2"]</h1>
+
+    <input type="text" name="Answer2" />
+
+    <h1>@ViewData["Q3"]</h1>
+
+    <input type="text" name="Answer3" />
+
+    <h1>@ViewData["Q4"]</h1>
+
+    <input type="text" name="Answer4" />
+
+    <h1>@ViewData["Q5"]</h1>
+
+    <input type="text" name="Answer5" />
+
+    <input type="submit" value="AttemptQuiz" class="btn btn-default" />
+}
