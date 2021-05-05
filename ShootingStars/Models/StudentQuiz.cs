@@ -32,3 +32,4 @@ namespace ShootingStars.Models
         public virtual Quiz Quiz { get; set; }
     }
 }
+

@@ -1,0 +1,43 @@
+﻿@model ShootingStars.Models.QuestionAnswer
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_TempLayout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>QuestionAnswer</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Quiz.QuizName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Quiz.QuizName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Question)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Question)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Answer)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Answer)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.QuestionAnswerID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

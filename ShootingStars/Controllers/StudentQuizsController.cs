@@ -44,26 +44,31 @@ namespace ShootingStars.Controllers
             return View();
         }
 
-        // POST: StudentQuizs/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to, for 
-        // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<ActionResult> Create([Bind(Include = "StudentQuizID,StudentEmail,QuizID,StartTime,EndTime,Duration,Mark")] StudentQuiz studentQuiz)
         {
+            int[] id = new int[5];
+            var RandomID = new Random();
+            foreach (var item in db.QuestionAnswers.Where(x => x.QuizID == studentQuiz.QuizID))
+            {
+                for (int i = 0; i < 5; i++)
+                {
+                    id[i] = RandomID.Next(item.QuizID);
+                }
+            }
+            //We need to create a method to end our lives.
             if (ModelState.IsValid)
             {
                 db.StudentQuizzes.Add(studentQuiz);
                 await db.SaveChangesAsync();
                 return RedirectToAction("Index");
             }
-
-            ViewBag.QuizID = new SelectList(db.Quizzes, "QuizID", "QuizName", studentQuiz.QuizID);
             return View(studentQuiz);
         }
 
-        // GET: StudentQuizs/Edit/5
-        public async Task<ActionResult> Edit(int? id)
+            // GET: StudentQuizs/Edit/5
+            public async Task<ActionResult> Edit(int? id)
         {
             if (id == null)
             {

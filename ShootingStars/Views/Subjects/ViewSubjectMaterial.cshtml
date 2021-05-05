@@ -56,6 +56,14 @@
         <p><button><a href="~/Content/SubjectMaterial/@item.MaterialFile">Download</a></button></p>
     </div>
 }
+@foreach (var item in Model)
+{
+    var quiz = item.Subjects.Quizzes.Where(x => x.SubjectID == item.SubjectID);
+    foreach (var items in quiz)
+    {
+        
+    }
+}
 
 
 

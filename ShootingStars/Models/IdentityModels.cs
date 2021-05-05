@@ -51,6 +51,7 @@ namespace ShootingStars.Models
         public DbSet<Support> Supports { get; set; }
         public DbSet<SubjectMaterial> SubjectMaterials { get; set; }
         public DbSet<Chat> Chats { get; set; }
+        public DbSet<QuestionAnswer> QuestionAnswers { get; set; }
 
         public static ApplicationDbContext Create()
         {

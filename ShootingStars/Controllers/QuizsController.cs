@@ -49,7 +49,7 @@ namespace ShootingStars.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> Create([Bind(Include = "QuizID,QuizName,Questions,Answers,SubjectID")] Quiz quiz)
+        public async Task<ActionResult> Create([Bind(Include = "QuizID,QuizName,Questions,Answers,SubjectID")] Quiz quiz, FormCollection formCollection)
         {
             if (ModelState.IsValid)
             {

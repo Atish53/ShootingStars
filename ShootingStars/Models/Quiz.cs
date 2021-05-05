@@ -15,10 +15,6 @@ namespace ShootingStars.Models
         [Key]
         public int QuizID { get; set; }
 
-        public List<string> Questions { get; set; }
-
-        public List<string> Answers { get; set; }
-
         public string QuizName { get; set; }
 
         public int SubjectID { get; set; }
@@ -26,6 +22,8 @@ namespace ShootingStars.Models
         public virtual Subject Subject { get; set; }
 
         public List<StudentQuiz> StudentQuizzes { get; set; }
+
+        public List<QuestionAnswer> QuestionAnswer { get; set; }
 
     }
 }

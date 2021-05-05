@@ -25,7 +25,8 @@ namespace ShootingStars.Controllers
         public ActionResult ViewSubjectMaterial(int id)
         {
             var subjectMaterial = db.SubjectMaterials.Where(x => x.SubjectID == id).ToList();
-
+            var quiz = db.Quizzes.Where(x => x.SubjectID == id).ToList();          
+                           
             return View(subjectMaterial);
         }
 

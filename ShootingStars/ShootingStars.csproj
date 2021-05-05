@@ -185,6 +185,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\QueriesController.cs" />
+    <Compile Include="Controllers\QuestionAnswersController.cs" />
     <Compile Include="Controllers\QuizsController.cs" />
     <Compile Include="Controllers\StudentQuizsController.cs" />
     <Compile Include="Controllers\SubjectMaterialsController.cs" />
@@ -208,6 +209,10 @@
     <Compile Include="Migrations\202105050107549_Quiz.Designer.cs">
       <DependentUpon>202105050107549_Quiz.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202105051326128_MigrationOK.cs" />
+    <Compile Include="Migrations\202105051326128_MigrationOK.Designer.cs">
+      <DependentUpon>202105051326128_MigrationOK.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Chat.cs" />
@@ -215,6 +220,7 @@
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\Query.cs" />
+    <Compile Include="Models\QuestionAnswer.cs" />
     <Compile Include="Models\Quiz.cs" />
     <Compile Include="Models\Student.cs" />
     <Compile Include="Models\StudentQuiz.cs" />
@@ -381,6 +387,11 @@
     <Content Include="Views\Quizs\Details.cshtml" />
     <Content Include="Views\Quizs\Edit.cshtml" />
     <Content Include="Views\Quizs\Index.cshtml" />
+    <Content Include="Views\QuestionAnswers\Create.cshtml" />
+    <Content Include="Views\QuestionAnswers\Delete.cshtml" />
+    <Content Include="Views\QuestionAnswers\Details.cshtml" />
+    <Content Include="Views\QuestionAnswers\Edit.cshtml" />
+    <Content Include="Views\QuestionAnswers\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -404,6 +415,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202105050107549_Quiz.resx">
       <DependentUpon>202105050107549_Quiz.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202105051326128_MigrationOK.resx">
+      <DependentUpon>202105051326128_MigrationOK.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
