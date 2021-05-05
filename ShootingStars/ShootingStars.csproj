@@ -213,14 +213,6 @@
     <Compile Include="Migrations\202105051326128_MigrationOK.Designer.cs">
       <DependentUpon>202105051326128_MigrationOK.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202105051748283_StudentQuizUpdate.cs" />
-    <Compile Include="Migrations\202105051748283_StudentQuizUpdate.Designer.cs">
-      <DependentUpon>202105051748283_StudentQuizUpdate.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202105052105150_New.cs" />
-    <Compile Include="Migrations\202105052105150_New.Designer.cs">
-      <DependentUpon>202105052105150_New.cs</DependentUpon>
-    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Chat.cs" />
@@ -250,10 +242,13 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Website Images\Review.png" />
     <Content Include="Content\Subject Images\4th.png" />
     <Content Include="Content\Subject Images\5th.png" />
     <Content Include="Content\SubjectMaterial\0_Fortnite-leaks212451131.jpg" />
     <Content Include="Content\SubjectMaterial\681958213125159.jpg" />
+    <Content Include="Content\Website Images\Review.jpg" />
+    <Content Include="Content\Website Images\Success Form.png" />
     <Content Include="Content\Website Images\Albert Einstein.jpg" />
     <Content Include="Content\Website Images\AppleBook %28Crop%29.jpg" />
     <Content Include="Content\Website Images\Bobby Jones.jpg" />
@@ -355,6 +350,7 @@
     <Content Include="Views\StudentQuizs\Delete.cshtml" />
     <Content Include="Views\StudentQuizs\Details.cshtml" />
     <Content Include="Views\StudentQuizs\Edit.cshtml" />
+    <Content Include="Views\StudentQuizs\Index.cshtml" />
     <Content Include="Views\Chats\Create.cshtml" />
     <Content Include="Views\Chats\Delete.cshtml" />
     <Content Include="Views\Chats\Details.cshtml" />
@@ -379,7 +375,6 @@
     <Content Include="Views\TeacherReviews\Details.cshtml" />
     <Content Include="Views\TeacherReviews\Edit.cshtml" />
     <Content Include="Views\TeacherReviews\Index.cshtml" />
-    <Content Include="Views\TeacherReviews\Thanks.cshtml" />
     <Content Include="Views\Subjects\ViewSubjectMaterial.cshtml" />
     <Content Include="Views\Queries\Success.cshtml" />
     <Content Include="Views\Manage\ViewQueries.cshtml" />
@@ -399,9 +394,7 @@
     <Content Include="Views\QuestionAnswers\Details.cshtml" />
     <Content Include="Views\QuestionAnswers\Edit.cshtml" />
     <Content Include="Views\QuestionAnswers\Index.cshtml" />
-    <Content Include="Views\Subjects\AttemptQuiz.cshtml" />
-    <Content Include="Views\StudentQuizs\AttemptQuiz.cshtml" />
-    <Content Include="Views\StudentQuizs\Index.cshtml" />
+    <Content Include="Views\TeacherReviews\Thanks.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -428,12 +421,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202105051326128_MigrationOK.resx">
       <DependentUpon>202105051326128_MigrationOK.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202105051748283_StudentQuizUpdate.resx">
-      <DependentUpon>202105051748283_StudentQuizUpdate.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202105052105150_New.resx">
-      <DependentUpon>202105052105150_New.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
