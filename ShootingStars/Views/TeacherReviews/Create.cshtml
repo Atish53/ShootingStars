@@ -12,7 +12,7 @@
     <style>
 
         body {
-            background-color: cornsilk;
+            background-color: ghostwhite;
             background-image: url('Website Images/Crunch.jpg');
             margin: 0;
             padding: 0;
@@ -22,9 +22,39 @@
 
 </head>
 
+
 <body>
 
-    <a2>Teacher Review Form:</a2>
+    <!-- Start Page Header area -->
+    <div id="mu-page-header" style="background-image: url('/Content/Website Images/HeaderImage (Crop).jpeg')" ;>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="mu-page-header-area">
+                        <h1 class="mu-page-header-title">Teacher Review</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Page Header area -->
+    <!-- Start Breadcrumb -->
+    <div id="mu-breadcrumb">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <nav aria-label="breadcrumb" role="navigation">
+                        <ol class="breadcrumb mu-breadcrumb">
+                            <li class="breadcrumb-item"><a href="#">Home</a></li>
+                            <li class="breadcrumb-item"><a href="#">Teacher Review</a></li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    &ensp;&ensp;
 
 
 
@@ -227,17 +257,11 @@
 
             <div class="form-group">
                 <div class="col-md-offset-2 col-md-10">
-                    <input type="submit" value="Submit" class="btn btn-default" />
+                    <input type="submit" value="Submit" class="btn btn-success" />
                 </div>
             </div>
         </div>
     }
-
-
-
-    <div>
-        @Html.ActionLink("Back to List", "Index")
-    </div>
 
 
 </body>

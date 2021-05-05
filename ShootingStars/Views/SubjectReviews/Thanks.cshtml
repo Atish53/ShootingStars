@@ -5,24 +5,21 @@
     Layout = "~/Views/Shared/_TempLayout.cshtml";
 }
 
-<head>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="~/Content/site.css">
-
-</head>
-
+&ensp;&ensp;&ensp;&ensp;
 <body>
 
-    <div class="center-div">
-        <a1>Thanks,</a1>
-        <p>
-            <a1>Your submission was successful!</a1>
+    <div style="text-align:center">
+        <h2>Thank you for your Submission</h2>
     </div>
 
-    <br>
+    <br />
 
-    <img src="~/Content/Website Images/yey.png" class="center-img" width="550" height="500">
+    <div style="text-align:center">
+        <img src="~/Content/Website Images/Success Form.png" class="center-img" width="750" height="500">
+    </div>
 
-    <a12>Return to @Html.ActionLink("Home", "Index", "Home")</a12>
-
+    <div style="text-align:center">
+        <a href='@Url.Action("Index", "Home")'><button style="text-align:center">Return To Home</button></a>
+    </div>
 </body>
+&ensp;&ensp;&ensp;&ensp;
