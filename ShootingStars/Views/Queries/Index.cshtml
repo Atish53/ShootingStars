@@ -3,10 +3,7 @@
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_TempLayout.cshtml";
-}
-
-<h2>Index</h2>
-
+}<h1>Pending Queries</h1>
 <table class="table">
     <tr>
         <th>
@@ -30,30 +27,83 @@
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
+    @foreach (var item in Model.Where(model => model.CompletionStatus == false))
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.StudentEmail)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Message)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.QueryTypes)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Response)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DateCreated)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CompletionStatus)
+            </td>
+            <td>
+                @Html.ActionLink("Respond", "Edit", new { id = item.QueryID })
+            </td>
+        </tr>
+    }
+
+</table>
+<h1>Completed Queries</h1>
+<table class="table">
     <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.StudentEmail)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Message)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.QueryTypes)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Response)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.DateCreated)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.CompletionStatus)
-        </td>
-        <td>
-            @Html.ActionLink("Respond", "Edit", new { id=item.QueryID })           
-        </td>
+        <th>
+            @Html.DisplayNameFor(model => model.StudentEmail)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Message)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.QueryTypes)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Response)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DateCreated)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CompletionStatus)
+        </th>
+        <th></th>
     </tr>
-}
+
+    @foreach (var item in Model.Where(model => model.CompletionStatus == true))
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.StudentEmail)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Message)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.QueryTypes)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Response)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DateCreated)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CompletionStatus)
+            </td>
+            <td>
+                @Html.ActionLink("View", "Details", new { id = item.QueryID })
+            </td>
+        </tr>
+    }
 
 </table>

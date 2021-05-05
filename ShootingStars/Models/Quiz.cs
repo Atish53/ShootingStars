@@ -15,9 +15,9 @@ namespace ShootingStars.Models
         [Key]
         public int QuizID { get; set; }
 
-        public string[] Questions { get; set; }
+        public List<string> Questions { get; set; }
 
-        public string[] Answers { get; set; }
+        public List<string> Answers { get; set; }
 
         public string QuizName { get; set; }
 

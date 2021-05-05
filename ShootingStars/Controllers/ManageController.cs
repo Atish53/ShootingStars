@@ -36,9 +36,9 @@ namespace ShootingStars.Controllers
             {
                 return _signInManager ?? HttpContext.GetOwinContext().Get<ApplicationSignInManager>();
             }
-            private set 
-            { 
-                _signInManager = value; 
+            private set
+            {
+                _signInManager = value;
             }
         }
 
@@ -78,12 +78,9 @@ namespace ShootingStars.Controllers
             };
 
             string studentEmail = User.Identity.GetStudentEmail();
-            var Queries = from query in db.Queries
-                          where query.StudentEmail == User.Identity.GetStudentEmail()
-                          select query;
 
-            int numQueries = 0;
-            
+            int numQueries = db.Queries.Count(x => x.StudentEmail == studentEmail);
+
             ViewData["Queries"] = numQueries;
 
             return View(model);
@@ -364,7 +361,7 @@ namespace ShootingStars.Controllers
             base.Dispose(disposing);
         }
 
-#region Helpers
+        #region Helpers
         // Used for XSRF protection when adding external logins
         private const string XsrfKey = "XsrfId";
 
@@ -415,6 +412,6 @@ namespace ShootingStars.Controllers
             Error
         }
 
-#endregion
+        #endregion
     }
 }

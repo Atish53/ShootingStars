@@ -39,7 +39,7 @@ namespace ShootingStars.Models
     {
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)
-        {            
+        {
         }
 
         public DbSet<Subject> Subjects { get; set; }

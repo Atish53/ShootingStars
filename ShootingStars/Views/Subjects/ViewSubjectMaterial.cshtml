@@ -48,16 +48,15 @@
 
 &ensp;&ensp;&ensp;&ensp;
 
-
-
 @foreach (var item in Model)
 {
-
     <div id="paragraph">
         <h2>@item.MaterialName</h2>
         <p>Subject: @item.Subjects.SubjectName</p>
         <p><button><a href="~/Content/SubjectMaterial/@item.MaterialFile">Download</a></button></p>
     </div>
 }
+
+
 
 

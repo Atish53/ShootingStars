@@ -70,9 +70,6 @@ namespace ShootingStars.Controllers
                     return View();
                 }
 
-
-
-
                 db.SubjectMaterials.Add(subjectMaterial);
                 db.SaveChanges();
                 return RedirectToAction("Index");
@@ -116,7 +113,6 @@ namespace ShootingStars.Controllers
                 {
                     return View();
                 }
-
 
                 db.Entry(subjectMaterial).State = EntityState.Modified;
                 db.SaveChanges();
