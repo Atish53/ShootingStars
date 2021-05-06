@@ -71,32 +71,33 @@
     <div style="text-align:center"><p>@Html.ActionLink("+ Add New Slides", "Create", "SubjectMaterials")</p></div>
 }
 
+<br />
+<br />
+<br />
 
-
-
-<br /><br /><br />
-
-<div style="text-align:center"><h1>Quizzes:</h1></div>
-<div id="paragraph">
-    @foreach (var item in Model)
-    {
-        var quiz = item.Subjects.Quizzes.Where(x => x.SubjectID == item.SubjectID);
-        foreach (var items in quiz)
-        {
-            @Html.ActionLink(items.QuizName, "AttemptQuiz", new { id = items.QuizID })
-            <br />
-        }
-    }
-</div>
-
-<div>
-    @{ Html.RenderAction("StudentScore");}
-</div>
-
-
-<br /><br /><br />
 @if (Request.IsAuthenticated && User.IsInRole("Student"))
 {
+    <div style="text-align:center"><h1>Quizzes:</h1></div>
+    <div id="paragraph">
+        @foreach (var item in Model)
+        {
+            var quiz = item.Subjects.Quizzes.Where(x => x.SubjectID == item.SubjectID);
+            foreach (var items in quiz)
+            {
+                @Html.ActionLink(items.QuizName, "AttemptQuiz", new { id = items.QuizID })
+                <br />
+            }
+        }
+    </div>
+
+    <div>
+        @{ Html.RenderAction("StudentScore");}
+    </div>
+
+    <br />
+    <br />
+    <br />
+
     <div style="text-align:center"><h1>Write Reviews:</h1></div>
 
     <div id="paragraph">
@@ -110,7 +111,8 @@
 }
 
 
-<br /><br />
+<br />
+<br />
 
 @if (Request.IsAuthenticated && User.IsInRole("Teacher"))
 {

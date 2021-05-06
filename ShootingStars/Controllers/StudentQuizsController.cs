@@ -218,7 +218,7 @@ namespace ShootingStars.Controllers
         }
 
         // GET: StudentQuizs/Success/5
-        public async Task<ActionResult> SuccessAsync(int? id)
+        public async Task<ActionResult> Success(int? id)
         {
             string[] answerArray = new string[5];
             string[] questionArray = new string[5];

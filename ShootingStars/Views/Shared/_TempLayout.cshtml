@@ -57,17 +57,23 @@
                         <li class="nav-item">@Html.ActionLink("Grade", "Grade", "Home")</li>
                         <li class="nav-item">@Html.ActionLink("About", "About", "Home")</li>
                         @if (Request.IsAuthenticated && User.IsInRole("Administrator"))
-                        {                            
+                        {
                             <li class="nav-item">@Html.ActionLink("Admin Panel", "AdminPanel", "Home")</li>
                         }
                         @if (Request.IsAuthenticated && User.IsInRole("Support"))
-                        {                            
+                        {
                             <li class="nav-item">@Html.ActionLink("Queries", "Index", "Queries")</li>
                         }
                         @if (Request.IsAuthenticated && User.IsInRole("Student"))
                         {
                             <li class="nav-item">@Html.ActionLink("Ask A Question", "Create", "Queries")</li>
                         }
+                        @if (Request.IsAuthenticated && User.IsInRole("Teacher"))
+                        {
+                            <li class="nav-item">@Html.ActionLink("Quiz", "Create", "Quizs")</li>
+                            <li class="nav-item">@Html.ActionLink("Quiz Material", "Create", "QuestionAnswers")</li>
+                        }
+
 
 
 
