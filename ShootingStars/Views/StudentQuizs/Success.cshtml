@@ -1,0 +1,102 @@
+﻿@model ShootingStars.Models.StudentQuiz
+
+@{
+    ViewBag.Title = "Success";
+    Layout = "~/Views/Shared/_TempLayout.cshtml";
+}
+
+<h2>All finished...</h2>
+
+<h3>Well Done! You have achieved a score of @Model.Mark %</h3>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Quiz.QuizName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Quiz.QuizName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Quiz.Subject.SubjectName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Quiz.Subject.SubjectName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.StudentEmail)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.StudentEmail)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DateAttempted)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DateAttempted)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Mark)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Mark)%
+        </dd>
+
+    </dl>
+</div>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            1. @ViewData["Q1"]
+        </dt>
+
+        <dd>
+            Answer: @ViewData["A1"]
+        </dd>
+        <dt>
+            2. @ViewData["Q2"]
+        </dt>
+
+        <dd>
+            Answer: @ViewData["A2"]
+        </dd>
+        <dt>
+            3. @ViewData["Q3"]
+        </dt>
+
+        <dd>
+            Answer: @ViewData["A3"]
+        </dd>
+        <dt>
+            4. @ViewData["Q4"]
+        </dt>
+
+        <dd>
+            Answer: @ViewData["A4"]
+        </dd>
+        <dt>
+            5. @ViewData["Q5"]
+        </dt>
+
+        <dd>
+            Answer: @ViewData["A5"]
+        </dd>
+    </dl>
+</div>
+
+</br>
+    <p>
+        @Html.ActionLink("Return Home", "Index")
+    </p>

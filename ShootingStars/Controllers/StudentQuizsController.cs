@@ -153,7 +153,7 @@ namespace ShootingStars.Controllers
             {
                 db.StudentQuizzes.Add(studentQuiz);
                 await db.SaveChangesAsync();
-                return RedirectToAction("Index");
+                return RedirectToAction("Success", new { id = studentQuiz.StudentQuizID });
             }
             return View(studentQuiz);
         }
@@ -215,6 +215,46 @@ namespace ShootingStars.Controllers
             db.StudentQuizzes.Remove(studentQuiz);
             await db.SaveChangesAsync();
             return RedirectToAction("Index");
+        }
+
+        // GET: StudentQuizs/Success/5
+        public async Task<ActionResult> SuccessAsync(int? id)
+        {
+            string[] answerArray = new string[5];
+            string[] questionArray = new string[5];
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            StudentQuiz studentQuiz = await db.StudentQuizzes.FindAsync(id);
+            if (studentQuiz == null)
+            {
+                return HttpNotFound();
+            }
+            int QuizIDs = studentQuiz.QuizID;
+            for (int i = 0; i < db.QuestionAnswers.Where((x => x.QuizID == QuizIDs)).Count();)
+                foreach (var item in db.QuestionAnswers.Where(x => x.QuizID == QuizIDs))
+                {
+                    {
+                        answerArray[i] = item.Answer;
+                        questionArray[i] = item.Question;
+                        i++;
+                    }
+                }
+
+            ViewData["Q1"] = questionArray[0];
+            ViewData["Q2"] = questionArray[1];
+            ViewData["Q3"] = questionArray[2];
+            ViewData["Q4"] = questionArray[3];
+            ViewData["Q5"] = questionArray[4];
+
+            ViewData["A1"] = answerArray[0];
+            ViewData["A2"] = answerArray[1];
+            ViewData["A3"] = answerArray[2];
+            ViewData["A4"] = answerArray[3];
+            ViewData["A5"] = answerArray[4];
+
+            return View(studentQuiz);
         }
 
         protected override void Dispose(bool disposing)

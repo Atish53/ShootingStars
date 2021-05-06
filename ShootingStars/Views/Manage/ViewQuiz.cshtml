@@ -1,0 +1,39 @@
+﻿@model IEnumerable<ShootingStars.Models.StudentQuiz>
+@using ShootingStars.Models
+@{
+    ViewBag.Title = "ViewQuizzes";
+    Layout = "~/Views/Shared/_TempLayout.cshtml";
+}
+
+<h2>View Your Previously Attempted Quizzes</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Quiz.QuizName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DateAttempted)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Mark)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model.Where(x => x.StudentEmail == User.Identity.GetStudentEmail()))
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Quiz.QuizName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DateAttempted)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Mark)
+            </td>
+        </tr>
+    }
+
+</table>

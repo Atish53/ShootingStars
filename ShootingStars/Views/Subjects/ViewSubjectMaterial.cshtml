@@ -57,7 +57,7 @@
     <div id="paragraph">
         <h2>@item.MaterialName</h2>
         <p>Subject: @item.Subjects.SubjectName</p>
-        <p><button><a href="~/Content/SubjectMaterial/@item.MaterialFile">Download</a></button></p>
+        <p><button><a href="~/Content/SubjectMaterial/@item.MaterialFile" download="@item.MaterialFile">Download</a></button></p>
     </div>
 }
 
@@ -89,6 +89,9 @@
     }
 </div>
 
+<div>
+    @{ Html.RenderAction("StudentScore");}
+</div>
 
 
 <br /><br /><br />

@@ -158,6 +158,15 @@ namespace ShootingStars.Controllers
             return RedirectToAction("AttemptQuiz/" + id, "StudentQuizs");
         }
 
+
+        [ChildActionOnly]
+        public ActionResult StudentScore(string marks, int? id)
+        {
+            marks = User.Identity.GetStudentEmail();
+            var studentQuiz = db.StudentQuizzes.Where(x => x.StudentEmail == marks && x.Quiz.SubjectID == id).ToList();
+            return PartialView("StudentScore", db.StudentQuizzes.Where(x => x.StudentEmail == marks && x.Quiz.SubjectID == id).ToList());
+        }
+
         protected override void Dispose(bool disposing)
         {
             if (disposing)

@@ -80,8 +80,10 @@ namespace ShootingStars.Controllers
             string studentEmail = User.Identity.GetStudentEmail();
 
             int numQueries = db.Queries.Count(x => x.StudentEmail == studentEmail);
+            int numQuiz = db.StudentQuizzes.Count(x => x.StudentEmail == studentEmail);
 
             ViewData["Queries"] = numQueries;
+            ViewData["Quiz"] = numQuiz;
 
             return View(model);
         }
@@ -348,6 +350,11 @@ namespace ShootingStars.Controllers
         public async Task<ActionResult> ViewQueries()
         {
             return View(await db.Queries.ToListAsync());
+        }
+        // GET: Queries
+        public async Task<ActionResult> ViewQuiz()
+        {
+            return View(await db.StudentQuizzes.ToListAsync());
         }
 
         protected override void Dispose(bool disposing)

@@ -23,7 +23,7 @@ namespace ShootingStars.Models
         public string Message { get; set; }
 
         [Required]
-        [Display(Name = "Select a query type")]
+        [Display(Name = "QueryTypes")]
         public string QueryTypes { get; set; }
 
         public string Response { get; set; }

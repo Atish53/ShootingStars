@@ -221,6 +221,14 @@
     <Compile Include="Migrations\202105060008087_JustChecking.Designer.cs">
       <DependentUpon>202105060008087_JustChecking.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202105060146334_Query.cs" />
+    <Compile Include="Migrations\202105060146334_Query.Designer.cs">
+      <DependentUpon>202105060146334_Query.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202105060206358_Query1.cs" />
+    <Compile Include="Migrations\202105060206358_Query1.Designer.cs">
+      <DependentUpon>202105060206358_Query1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Chat.cs" />
@@ -354,7 +362,6 @@
     <Content Include="Views\Teachers\Details.cshtml" />
     <Content Include="Views\Teachers\Edit.cshtml" />
     <Content Include="Views\Teachers\Index.cshtml" />
-    <Content Include="Views\StudentQuizs\Create.cshtml" />
     <Content Include="Views\StudentQuizs\Delete.cshtml" />
     <Content Include="Views\StudentQuizs\Details.cshtml" />
     <Content Include="Views\StudentQuizs\Edit.cshtml" />
@@ -403,6 +410,10 @@
     <Content Include="Views\QuestionAnswers\Edit.cshtml" />
     <Content Include="Views\QuestionAnswers\Index.cshtml" />
     <Content Include="Views\TeacherReviews\Thanks.cshtml" />
+    <Content Include="Views\StudentQuizs\Create.cshtml" />
+    <Content Include="Views\Manage\ViewQuiz.cshtml" />
+    <Content Include="Views\StudentQuizs\Success.cshtml" />
+    <Content Include="Views\Subjects\StudentScore.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -435,6 +446,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202105060008087_JustChecking.resx">
       <DependentUpon>202105060008087_JustChecking.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202105060146334_Query.resx">
+      <DependentUpon>202105060146334_Query.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202105060206358_Query1.resx">
+      <DependentUpon>202105060206358_Query1.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

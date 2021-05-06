@@ -5,13 +5,10 @@
     Layout = "~/Views/Shared/_TempLayout.cshtml";
 }
 
-<h2>ViewQueries</h2>
+<h2>View Your Current Queries</h2>
 
 <table class="table">
     <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.StudentEmail)
-        </th>
         <th>
             @Html.DisplayNameFor(model => model.Message)
         </th>
@@ -33,9 +30,6 @@
 @foreach (var item in Model.Where(x => x.StudentEmail == User.Identity.GetStudentEmail())) {
     <tr>
         <td>
-            @Html.DisplayFor(modelItem => item.StudentEmail)
-        </td>
-        <td>
             @Html.DisplayFor(modelItem => item.Message)
         </td>
         <td>
@@ -49,11 +43,6 @@
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.CompletionStatus)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.QueryID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.QueryID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.QueryID })
         </td>
     </tr>
 }

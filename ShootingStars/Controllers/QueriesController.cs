@@ -49,7 +49,7 @@ namespace ShootingStars.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> Create([Bind(Include = "QueryID,Message,QueryType")] Query query)
+        public async Task<ActionResult> Create([Bind(Include = "QueryID,Message,QueryTypes")] Query query)
         {
             if (ModelState.IsValid)
             {                
@@ -57,7 +57,7 @@ namespace ShootingStars.Controllers
                 query.DateCreated = DateTime.Now;
                 db.Queries.Add(query);
                 await db.SaveChangesAsync();
-                return RedirectToAction("Success");
+                return RedirectToAction("Index", "Manage");
             }
             return View(query);
         }

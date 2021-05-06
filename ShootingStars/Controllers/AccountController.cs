@@ -167,12 +167,13 @@ namespace ShootingStars.Controllers
             if (ModelState.IsValid)
             {
                 var user = new ApplicationUser { UserName = model.StudentName, Email = model.Email, StudentEmail = model.Email, StudentPhoneNumber = model.StudentPhoneNumber, StudentName = model.StudentName };
+                
                 var result = await UserManager.CreateAsync(user, model.Password);
+                result = await UserManager.AddToRoleAsync(user.Id, "Student");
                 if (result.Succeeded)
                 {
                     await SignInManager.SignInAsync(user, isPersistent: false, rememberBrowser: false);
-
-                    await UserManager.AddToRoleAsync(user.Id, "Student"); //Student Role
+                    await UserManager.AddToRoleAsync(user.Id, "Student"); //Student Role                
 
                     // For more information on how to enable account confirmation and password reset please visit https://go.microsoft.com/fwlink/?LinkID=320771
                     // Send an email with this link
