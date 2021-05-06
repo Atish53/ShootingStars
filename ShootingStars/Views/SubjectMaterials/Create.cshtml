@@ -5,12 +5,41 @@
     Layout = "~/Views/Shared/_TempLayout.cshtml";
 }
 
-<h2>Create</h2>
+<!-- Start Page Header area -->
+<div id="mu-page-header" style="background-image: url('/Content/Website Images/HeaderImage (Crop).jpeg')" ;>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="mu-page-header-area">
+                    <h1 class="mu-page-header-title">Add New Subject Materials</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Page Header area -->
+<!-- Start Breadcrumb -->
+<div id="mu-breadcrumb">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <nav aria-label="breadcrumb" role="navigation">
+                    <ol class="breadcrumb mu-breadcrumb">
+                        <li class="breadcrumb-item"><a href="#">Home</a></li>
+                        <li class="breadcrumb-item"><a href="#">Add New Subject Materials</a></li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+    </div>
+</div>
 
-@using (Html.BeginForm("Create", "SubjectMaterials", FormMethod.Post, new { enctype = "multipart/form-data" })) 
+<br />
+
+@using (Html.BeginForm("Create", "SubjectMaterials", FormMethod.Post, new { enctype = "multipart/form-data" }))
 {
     @Html.AntiForgeryToken()
-    
+
     <div class="form-horizontal">
         <h4>SubjectMaterial</h4>
         <hr />

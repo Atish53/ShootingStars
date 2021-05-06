@@ -5,102 +5,142 @@
     Layout = "~/Views/Shared/_TempLayout.cshtml";
 }
 
-<h2>Index</h2>
+<!-- Start Page Header area -->
+<div id="mu-page-header" style="background-image: url('/Content/Website Images/HeaderImage (Crop).jpeg')" ;>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="mu-page-header-area">
+                    <h1 class="mu-page-header-title">Teacher Reviews</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Page Header area -->
+<!-- Start Breadcrumb -->
+<div id="mu-breadcrumb">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <nav aria-label="breadcrumb" role="navigation">
+                    <ol class="breadcrumb mu-breadcrumb">
+                        <li class="breadcrumb-item"><a href="#">Home</a></li>
+                        <li class="breadcrumb-item"><a href="#">Teacher Reviews</a></li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+    </div>
+</div>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.Grade)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Class)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Name)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Q1)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Q2)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Q3)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Q4)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Q5)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Q6)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Q7)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Q8)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Q9)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Q10)
-        </th>
-        <th></th>
-    </tr>
+<br />
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Grade)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Class)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Name)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Q1)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Q2)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Q3)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Q4)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Q5)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Q6)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Q7)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Q8)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Q9)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Q10)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.ID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.ID })
-        </td>
-    </tr>
+@if (Request.IsAuthenticated && User.IsInRole("Administrator"))
+{
+    <p>
+        @Html.ActionLink("Create New", "Create")
+    </p>
 }
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Grade)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Class)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Q1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Q2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Q3)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Q4)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Q5)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Q6)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Q7)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Q8)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Q9)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Q10)
+            </th>
+            @if (Request.IsAuthenticated && User.IsInRole("Administrator"))
+            {
+                <th></th>
+            }
+            </tr>
 
-</table>
+        @foreach (var item in Model)
+        {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Grade)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Class)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Q1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Q2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Q3)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Q4)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Q5)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Q6)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Q7)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Q8)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Q9)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Q10)
+            </td>
+
+            @if (Request.IsAuthenticated && User.IsInRole("Administrator"))
+            {
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.ID }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.ID }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.ID })
+                </td>
+            }
+            </tr>
+        }
+
+    </table>

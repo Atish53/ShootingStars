@@ -5,10 +5,39 @@
     Layout = "~/Views/Shared/_TempLayout.cshtml";
 }
 
-<h2>Index</h2>
+<!-- Start Page Header area -->
+<div id="mu-page-header" style="background-image: url('/Content/Website Images/HeaderImage (Crop).jpeg')" ;>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="mu-page-header-area">
+                    <h1 class="mu-page-header-title">All Subject Materials</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Page Header area -->
+<!-- Start Breadcrumb -->
+<div id="mu-breadcrumb">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <nav aria-label="breadcrumb" role="navigation">
+                    <ol class="breadcrumb mu-breadcrumb">
+                        <li class="breadcrumb-item"><a href="#">Home</a></li>
+                        <li class="breadcrumb-item"><a href="#">All Subject Materials</a></li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+    </div>
+</div>
+
+<br />
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Add New Material", "Create")
 </p>
 <table class="table">
     <tr>
@@ -24,23 +53,24 @@
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Subjects.SubjectName)
-        </td>
-        <td>
-            <button><a href="~/Content/SubjectMaterial/@item.MaterialFile">Download</a></button>
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.MaterialName)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.SubjectMaterialID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.SubjectMaterialID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.SubjectMaterialID })
-        </td>
-    </tr>
-}
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Subjects.SubjectName)
+            </td>
+            <td>
+                <button><a href="~/Content/SubjectMaterial/@item.MaterialFile">Download</a></button>
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MaterialName)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.SubjectMaterialID }) |
+                @Html.ActionLink("Details", "Details", new { id = item.SubjectMaterialID }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.SubjectMaterialID })
+            </td>
+        </tr>
+    }
 
 </table>

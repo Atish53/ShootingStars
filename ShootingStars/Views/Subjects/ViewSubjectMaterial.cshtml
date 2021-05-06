@@ -48,6 +48,10 @@
 
 &ensp;&ensp;&ensp;&ensp;
 
+<br />
+
+<div style="text-align:center"><h1>Slides:</h1></div>
+
 @foreach (var item in Model)
 {
     <div id="paragraph">
@@ -56,15 +60,80 @@
         <p><button><a href="~/Content/SubjectMaterial/@item.MaterialFile">Download</a></button></p>
     </div>
 }
-<h1>Quiz</h1
-@foreach (var item in Model)
+
+@if (Request.IsAuthenticated && User.IsInRole("Teacher"))
 {
-    var quiz = item.Subjects.Quizzes.Where(x => x.SubjectID == item.SubjectID);    
-    foreach (var items in quiz)
-    {
-        @Html.ActionLink( items.QuizName, "AttemptQuiz", new { id = items.QuizID})
-    }  
+    <div style="text-align:center"><p>@Html.ActionLink("+ Add New Slides", "Create", "SubjectMaterials")</p></div>
+}
+
+@if (Request.IsAuthenticated && User.IsInRole("Administrator"))
+{
+    <div style="text-align:center"><p>@Html.ActionLink("+ Add New Slides", "Create", "SubjectMaterials")</p></div>
 }
 
 
 
+
+<br /><br /><br />
+
+<div style="text-align:center"><h1>Quizzes:</h1></div>
+<div id="paragraph">
+    @foreach (var item in Model)
+    {
+        var quiz = item.Subjects.Quizzes.Where(x => x.SubjectID == item.SubjectID);
+        foreach (var items in quiz)
+        {
+            @Html.ActionLink(items.QuizName, "AttemptQuiz", new { id = items.QuizID })
+            <br />
+        }
+    }
+</div>
+
+
+
+<br /><br /><br />
+@if (Request.IsAuthenticated && User.IsInRole("Student"))
+{
+    <div style="text-align:center"><h1>Write Reviews:</h1></div>
+
+    <div id="paragraph">
+        <h2>Write a Review of Subject</h2>
+        <p><button><a href='@Url.Action("Create", "SubjectReviews")'>Write Review</a></button></p>
+    </div>
+    <div id="paragraph">
+        <h2>Write a Review of Teacher</h2>
+        <p><button><a href='@Url.Action("Create", "TeacherReviews")'>Write Review</a></button></p>
+    </div>
+}
+
+
+<br /><br />
+
+@if (Request.IsAuthenticated && User.IsInRole("Teacher"))
+{
+    <div style="text-align:center"><h1>View Reviews:</h1></div>
+
+    <div id="paragraph">
+        <h2>View Reviews of Subjects</h2>
+        <p><button><a href='@Url.Action("Index", "SubjectReviews")'>View Reviews</a></button></p>
+    </div>
+    <div id="paragraph">
+        <h2>View Reviews of Teachers</h2>
+        <p><button><a href='@Url.Action("Index", "TeacherReviews")'>View Reviews</a></button></p>
+    </div>
+}
+
+
+@if (Request.IsAuthenticated && User.IsInRole("Administrator"))
+{
+    <div style="text-align:center"><h1>View Reviews:</h1></div>
+
+    <div id="paragraph">
+        <h2>View Reviews of Subjects</h2>
+        <p><button><a href='@Url.Action("Index", "SubjectReviews")'>View Reviews</a></button></p>
+    </div>
+    <div id="paragraph">
+        <h2>View Reviews of Teachers</h2>
+        <p><button><a href='@Url.Action("Index", "TeacherReviews")'>View Reviews</a></button></p>
+    </div>
+}

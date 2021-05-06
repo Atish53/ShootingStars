@@ -213,6 +213,14 @@
     <Compile Include="Migrations\202105051326128_MigrationOK.Designer.cs">
       <DependentUpon>202105051326128_MigrationOK.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202105052228108_NewClone.cs" />
+    <Compile Include="Migrations\202105052228108_NewClone.Designer.cs">
+      <DependentUpon>202105052228108_NewClone.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202105060008087_JustChecking.cs" />
+    <Compile Include="Migrations\202105060008087_JustChecking.Designer.cs">
+      <DependentUpon>202105060008087_JustChecking.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Chat.cs" />
@@ -421,6 +429,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202105051326128_MigrationOK.resx">
       <DependentUpon>202105051326128_MigrationOK.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202105052228108_NewClone.resx">
+      <DependentUpon>202105052228108_NewClone.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202105060008087_JustChecking.resx">
+      <DependentUpon>202105060008087_JustChecking.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

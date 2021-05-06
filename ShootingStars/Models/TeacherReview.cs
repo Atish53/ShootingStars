@@ -38,7 +38,7 @@ namespace ShootingStars.Models
         public string Q8 { get; set; }
         [Display(Name = "Is there anything that you are unhappy about with regards to your teacher?")]
         public string Q9 { get; set; }
-        [Display(Name = "Do you have any suggestion on how your teacher can improve on her teaching skills?")]
+        [Display(Name = "Do you have any suggestion on how your teacher can improve on their teaching skills?")]
         public string Q10 { get; set; }
     }
 }
